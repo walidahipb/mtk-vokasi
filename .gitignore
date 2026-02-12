@@ -1,0 +1,7 @@
+/_book/
+/_site/
+/.quarto/
+*.log
+*.aux
+*.out
+*.toc
