@@ -1,0 +1,285 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Matematika untuk Pendidikan Tinggi Vokasi",
+    "section": "",
+    "text": "Pendahuluan\nBuku ini disusun untuk mendukung pembelajaran matematika pada pendidikan tinggi vokasi.",
+    "crumbs": [
+      "Pendahuluan"
+    ]
+  },
+  {
+    "objectID": "index.html#cakupan-materi",
+    "href": "index.html#cakupan-materi",
+    "title": "Matematika untuk Pendidikan Tinggi Vokasi",
+    "section": "Cakupan Materi",
+    "text": "Cakupan Materi\n\nMatriks\nSistem Persamaan Linear\nKetaksamaan\nFungsi\nLimit dan Kekontinuan\nTurunan\nIntegral",
+    "crumbs": [
+      "Pendahuluan"
+    ]
+  },
+  {
+    "objectID": "01-matriks.html",
+    "href": "01-matriks.html",
+    "title": "1  Matriks",
+    "section": "",
+    "text": "1.1 Tujuan Pembelajaran\nTuliskan tujuan pembelajaran di sini.",
+    "crumbs": [
+      "Materi",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Matriks</span>"
+    ]
+  },
+  {
+    "objectID": "01-matriks.html#materi",
+    "href": "01-matriks.html#materi",
+    "title": "1  Matriks",
+    "section": "1.2 Materi",
+    "text": "1.2 Materi\nTuliskan materi matriks di sini.",
+    "crumbs": [
+      "Materi",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Matriks</span>"
+    ]
+  },
+  {
+    "objectID": "01-matriks.html#latihan",
+    "href": "01-matriks.html#latihan",
+    "title": "1  Matriks",
+    "section": "1.3 Latihan",
+    "text": "1.3 Latihan\n\n…\n…",
+    "crumbs": [
+      "Materi",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Matriks</span>"
+    ]
+  },
+  {
+    "objectID": "02-spl.html",
+    "href": "02-spl.html",
+    "title": "2  Sistem Persamaan Linear",
+    "section": "",
+    "text": "2.1 Tujuan Pembelajaran\nTuliskan tujuan pembelajaran di sini.",
+    "crumbs": [
+      "Materi",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Sistem Persamaan Linear</span>"
+    ]
+  },
+  {
+    "objectID": "02-spl.html#materi",
+    "href": "02-spl.html#materi",
+    "title": "2  Sistem Persamaan Linear",
+    "section": "2.2 Materi",
+    "text": "2.2 Materi\nTuliskan materi matriks di sini.",
+    "crumbs": [
+      "Materi",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Sistem Persamaan Linear</span>"
+    ]
+  },
+  {
+    "objectID": "02-spl.html#latihan",
+    "href": "02-spl.html#latihan",
+    "title": "2  Sistem Persamaan Linear",
+    "section": "2.3 Latihan",
+    "text": "2.3 Latihan\n\n…\n…",
+    "crumbs": [
+      "Materi",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Sistem Persamaan Linear</span>"
+    ]
+  },
+  {
+    "objectID": "03-ketaksamaan.html",
+    "href": "03-ketaksamaan.html",
+    "title": "3  Ketaksamaan",
+    "section": "",
+    "text": "3.1 Tujuan Pembelajaran\nTuliskan tujuan pembelajaran di sini.",
+    "crumbs": [
+      "Materi",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Ketaksamaan</span>"
+    ]
+  },
+  {
+    "objectID": "03-ketaksamaan.html#materi",
+    "href": "03-ketaksamaan.html#materi",
+    "title": "3  Ketaksamaan",
+    "section": "3.2 Materi",
+    "text": "3.2 Materi\nTuliskan materi matriks di sini.",
+    "crumbs": [
+      "Materi",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Ketaksamaan</span>"
+    ]
+  },
+  {
+    "objectID": "03-ketaksamaan.html#latihan",
+    "href": "03-ketaksamaan.html#latihan",
+    "title": "3  Ketaksamaan",
+    "section": "3.3 Latihan",
+    "text": "3.3 Latihan\n\n…\n…",
+    "crumbs": [
+      "Materi",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Ketaksamaan</span>"
+    ]
+  },
+  {
+    "objectID": "04-fungsi.html",
+    "href": "04-fungsi.html",
+    "title": "4  Fungsi",
+    "section": "",
+    "text": "4.1 Tujuan Pembelajaran\nTuliskan tujuan pembelajaran di sini.",
+    "crumbs": [
+      "Materi",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fungsi</span>"
+    ]
+  },
+  {
+    "objectID": "04-fungsi.html#materi",
+    "href": "04-fungsi.html#materi",
+    "title": "4  Fungsi",
+    "section": "4.2 Materi",
+    "text": "4.2 Materi\nTuliskan materi matriks di sini.",
+    "crumbs": [
+      "Materi",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fungsi</span>"
+    ]
+  },
+  {
+    "objectID": "04-fungsi.html#latihan",
+    "href": "04-fungsi.html#latihan",
+    "title": "4  Fungsi",
+    "section": "4.3 Latihan",
+    "text": "4.3 Latihan\n\n…\n…",
+    "crumbs": [
+      "Materi",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fungsi</span>"
+    ]
+  },
+  {
+    "objectID": "05-limit.html",
+    "href": "05-limit.html",
+    "title": "5  Limit",
+    "section": "",
+    "text": "5.1 Tujuan Pembelajaran\nTuliskan tujuan pembelajaran di sini.",
+    "crumbs": [
+      "Materi",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Limit</span>"
+    ]
+  },
+  {
+    "objectID": "05-limit.html#materi",
+    "href": "05-limit.html#materi",
+    "title": "5  Limit",
+    "section": "5.2 Materi",
+    "text": "5.2 Materi\nTuliskan materi matriks di sini.",
+    "crumbs": [
+      "Materi",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Limit</span>"
+    ]
+  },
+  {
+    "objectID": "05-limit.html#latihan",
+    "href": "05-limit.html#latihan",
+    "title": "5  Limit",
+    "section": "5.3 Latihan",
+    "text": "5.3 Latihan\n\n…\n…",
+    "crumbs": [
+      "Materi",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Limit</span>"
+    ]
+  },
+  {
+    "objectID": "06-turunan.html",
+    "href": "06-turunan.html",
+    "title": "6  Turunan",
+    "section": "",
+    "text": "6.1 Tujuan Pembelajaran\nTuliskan tujuan pembelajaran di sini.",
+    "crumbs": [
+      "Materi",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Turunan</span>"
+    ]
+  },
+  {
+    "objectID": "06-turunan.html#materi",
+    "href": "06-turunan.html#materi",
+    "title": "6  Turunan",
+    "section": "6.2 Materi",
+    "text": "6.2 Materi\nTuliskan materi matriks di sini.",
+    "crumbs": [
+      "Materi",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Turunan</span>"
+    ]
+  },
+  {
+    "objectID": "06-turunan.html#latihan",
+    "href": "06-turunan.html#latihan",
+    "title": "6  Turunan",
+    "section": "6.3 Latihan",
+    "text": "6.3 Latihan\n\n…\n…",
+    "crumbs": [
+      "Materi",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Turunan</span>"
+    ]
+  },
+  {
+    "objectID": "07-integral.html",
+    "href": "07-integral.html",
+    "title": "7  Integral",
+    "section": "",
+    "text": "7.1 Tujuan Pembelajaran\nTuliskan tujuan pembelajaran di sini.",
+    "crumbs": [
+      "Materi",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Integral</span>"
+    ]
+  },
+  {
+    "objectID": "07-integral.html#materi",
+    "href": "07-integral.html#materi",
+    "title": "7  Integral",
+    "section": "7.2 Materi",
+    "text": "7.2 Materi\nTuliskan materi matriks di sini.",
+    "crumbs": [
+      "Materi",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Integral</span>"
+    ]
+  },
+  {
+    "objectID": "07-integral.html#latihan",
+    "href": "07-integral.html#latihan",
+    "title": "7  Integral",
+    "section": "7.3 Latihan",
+    "text": "7.3 Latihan\n\n…\n…",
+    "crumbs": [
+      "Materi",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Integral</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "8  Introduction",
+    "section": "",
+    "text": "This is a book created from markdown and executable code.\nSee Knuth (1984) for additional discussion of literate programming.\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
+    "crumbs": [
+      "Materi",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "9  Summary",
+    "section": "",
+    "text": "In summary, this book has no content whatsoever.",
+    "crumbs": [
+      "Materi",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Summary</span>"
+    ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
+    "crumbs": [
+      "References"
+    ]
+  }
+]
