@@ -1,0 +1,36 @@
+project:
+  type: book
+
+book:
+  title: "Matematika untuk Pendidikan Tinggi Vokasi"
+  author: "Walidatush Sholihah, Nur Aziezah, Lia Yuliawati"
+  date: "2/12/2026"
+  #site-url: 
+  #repo-url: 
+  chapters:
+    - index.qmd
+    - part: "Materi"
+      chapters: 
+        - 01-matriks.qmd
+        - 02-spl.qmd
+        - 03-ketaksamaan.qmd
+        - 04-fungsi.qmd
+        - 05-limit.qmd
+        - 06-turunan.qmd
+        - 07-integral.qmd
+        - intro.qmd
+        - summary.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme:
+      - cosmo
+      - brand
+  #pdf:
+   # documentclass: scrreprt
+
+
+

@@ -1,0 +1,35 @@
+{
+  "index.qmd": {
+    "index.html": "468222e8"
+  },
+  "intro.qmd": {
+    "intro.html": "f0a4a26a"
+  },
+  "summary.qmd": {
+    "summary.html": "45142d14"
+  },
+  "references.qmd": {
+    "references.html": "38d1f7e2"
+  },
+  "01-matriks.qmd": {
+    "01-matriks.html": "1a3a89b7"
+  },
+  "02-spl.qmd": {
+    "02-spl.html": "7d7cb89f"
+  },
+  "03-ketaksamaan.qmd": {
+    "03-ketaksamaan.html": "cdf11df4"
+  },
+  "04-fungsi.qmd": {
+    "04-fungsi.html": "5dd9ba21"
+  },
+  "05-limit.qmd": {
+    "05-limit.html": "12545882"
+  },
+  "06-turunan.qmd": {
+    "06-turunan.html": "b8c5b86c"
+  },
+  "07-integral.qmd": {
+    "07-integral.html": "0adfe56b"
+  }
+}

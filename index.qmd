@@ -1,0 +1,15 @@
+# Pendahuluan {.unnumbered}
+
+
+Buku ini disusun untuk mendukung pembelajaran matematika pada pendidikan tinggi vokasi.
+
+## Cakupan Materi
+
+- Matriks
+- Sistem Persamaan Linear
+- Ketaksamaan
+- Fungsi
+- Limit dan Kekontinuan
+- Turunan
+- Integral
+
