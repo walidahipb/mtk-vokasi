@@ -219,6 +219,9 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#matriks-dan-bentuknya" id="toc-matriks-dan-bentuknya" class="nav-link" data-scroll-target="#matriks-dan-bentuknya"><span class="header-section-number">1.3.1</span> Matriks dan Bentuknya</a></li>
   <li><a href="#operasi-matriks" id="toc-operasi-matriks" class="nav-link" data-scroll-target="#operasi-matriks"><span class="header-section-number">1.3.2</span> Operasi Matriks</a></li>
+  <li><a href="#operasi-baris-dasar-obd" id="toc-operasi-baris-dasar-obd" class="nav-link" data-scroll-target="#operasi-baris-dasar-obd"><span class="header-section-number">1.3.3</span> Operasi Baris Dasar (OBD)</a></li>
+  <li><a href="#determinan-matriks" id="toc-determinan-matriks" class="nav-link" data-scroll-target="#determinan-matriks"><span class="header-section-number">1.3.4</span> Determinan Matriks</a></li>
+  <li><a href="#matriks-invers" id="toc-matriks-invers" class="nav-link" data-scroll-target="#matriks-invers"><span class="header-section-number">1.3.6</span> Matriks Invers</a></li>
   </ul></li>
   <li><a href="#rangkuman" id="toc-rangkuman" class="nav-link" data-scroll-target="#rangkuman"><span class="header-section-number">1.4</span> Rangkuman</a></li>
   <li><a href="#latihan" id="toc-latihan" class="nav-link" data-scroll-target="#latihan"><span class="header-section-number">1.5</span> Latihan</a></li>
@@ -281,7 +284,7 @@ A_{mxn} =
 \begin{pmatrix}
 a_{11} &amp; a_{12} &amp; ... &amp; a_{1n} \\
 a_{21} &amp; a_{22} &amp; ... &amp; a_{2n} \\
-... &amp; ... &amp; ... &amp; ... \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
 a_{m1} &amp; a_{m2} &amp; ... &amp; a_{mn}
 \end{pmatrix}
 \]</span></p>
@@ -310,7 +313,8 @@ A_{23}=\begin{pmatrix}
 2 &amp; 3 &amp; 4 \\ 3 &amp; 4 &amp; 5 \end{pmatrix}
 \]</span></p>
 </div>
-<p><strong>Anak Matriks</strong></p>
+<section id="anak-matriks" class="level4">
+<h4 class="anchored" data-anchor-id="anak-matriks">Anak Matriks</h4>
 <div id="thm-invers" class="theorem" title="Teorema">
 <p><span class="theorem-title"><strong>Theorem 1.1</strong></span> Anak matriks dari matriks A adalah suatu matriks baru yang diperoleh dengan menghilangkan beberapa baris atau kolom pada matriks A.</p>
 </div>
@@ -325,7 +329,9 @@ A_{23}= \begin{pmatrix} 2 &amp; 3 &amp; 4 \\ 3 &amp; 4 &amp; 5 \end{pmatrix}
 <li><p>Diperoleh dengan menghilangkan baris 2 dan kolom 3: <span class="math inline">\(A_{23}= \begin{pmatrix} 2 &amp; 3 \end{pmatrix}\)</span></p></li>
 </ul>
 </div>
-<p><strong>Matriks Khusus</strong></p>
+</section>
+<section id="matriks-khusus" class="level4">
+<h4 class="anchored" data-anchor-id="matriks-khusus">Matriks Khusus</h4>
 <p>Ada beberapa jenis matriks khusus sebagai berikut:</p>
 <ol type="1">
 <li><p>Matriks segi: matriks yang jumlah barisnya sama dengan jumlah kolomnya.Pada contoh berikut, maka elemen diagonal utamanya yaitu <span class="math inline">\(a_{11}, a_{22},..., a_{mn}\)</span>. <span class="math display">\[
@@ -333,7 +339,7 @@ A_{mxn} =
 \begin{pmatrix}
 a_{11} &amp; a_{12} &amp; ... &amp; a_{1n} \\
 a_{21} &amp; a_{22} &amp; ... &amp; a_{2n} \\
-... &amp; ... &amp; ... &amp; ... \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
 a_{m1} &amp; a_{m2} &amp; ... &amp; a_{mn}
 \end{pmatrix}
 \]</span></p></li>
@@ -344,7 +350,7 @@ A_{mxn} =
 \begin{pmatrix}
 a_{11} &amp; a_{12} &amp; ... &amp; a_{1n} \\
 0 &amp; a_{22} &amp; ... &amp; a_{2n} \\
-... &amp; ... &amp; ... &amp; ... \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
 0 &amp; 0 &amp; ... &amp; a_{mn}
 \end{pmatrix}
 \]</span> 3. Matriks segitiga bawah: matriks yang semua elemen di atas diagonal utamanya bernilai nol.</p>
@@ -353,7 +359,7 @@ A_{mxn} =
 \begin{pmatrix}
 a_{11} &amp; 0 &amp; ... &amp; 0 \\
 a_{21} &amp; a_{22} &amp; ... &amp; 0 \\
-... &amp; ... &amp; ... &amp; ... \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
 a_{m1} &amp; a_{m2} &amp; ... &amp; a_{mn}
 \end{pmatrix}
 \]</span> 4. Matriks diagonal: matriks yang semua elemen selain diagonal utamanya bernilai nol.</p>
@@ -362,7 +368,7 @@ A_{mxn} =
 \begin{pmatrix}
 a_{11} &amp; 0 &amp; ... &amp; 0 \\
 0 &amp; a_{22} &amp; ... &amp; 0 \\
-... &amp; ... &amp; ... &amp; ... \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
 0 &amp; 0 &amp; ... &amp; a_{mn}
 \end{pmatrix}
 \]</span> 5. Matriks identitas: matriks segi yang semua elemen diagonal utamanya bernilai satu dan selainnya bernilai nol.</p>
@@ -371,7 +377,7 @@ A_{mxn} =
 \begin{pmatrix}
 1 &amp; 0 &amp; ... &amp; 0 \\
 0 &amp; 1 &amp; ... &amp; 0 \\
-... &amp; ... &amp; ... &amp; ... \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
 0 &amp; 0 &amp; ... &amp; 1
 \end{pmatrix}
 \]</span></p>
@@ -383,14 +389,16 @@ A_{mxn} =
 \begin{pmatrix}
 0 &amp; 0 &amp; ... &amp; 0 \\
 0 &amp; 0 &amp; ... &amp; 0 \\
-... &amp; ... &amp; ... &amp; ... \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
 0 &amp; 0 &amp; ... &amp; 0
 \end{pmatrix}
 \]</span></p>
 </section>
+</section>
 <section id="operasi-matriks" class="level3" data-number="1.3.2">
 <h3 data-number="1.3.2" class="anchored" data-anchor-id="operasi-matriks"><span class="header-section-number">1.3.2</span> Operasi Matriks</h3>
-<p><strong>Penjumlahan atau pengurangan matriks</strong></p>
+<section id="penjumlahan-atau-pengurangan-matriks" class="level4">
+<h4 class="anchored" data-anchor-id="penjumlahan-atau-pengurangan-matriks">Penjumlahan atau pengurangan matriks</h4>
 <div id="def-matriks" class="theorem definition" title="Definisi">
 <p><span class="theorem-title"><strong>Definition 1.2</strong></span> <strong>Penjumlahan atau pengurangan matriks</strong> Dua matriks dapat dijumlahkan atau dikurangkan jika dan hanya jika kedua matriks tersebut memiliki ukuran yang sama. Artinya jika <span class="math inline">\(A=(a_{ij})_{mxn}\)</span> dan <span class="math inline">\(B=(b_{ij})_{mxn}\)</span> maka</p>
 <p><span class="math display">\[
@@ -402,7 +410,9 @@ A \pm B = \begin{pmatrix} a_{ij} \pm b_{ij} \end{pmatrix}_{m \times n}
 A+B = \begin{pmatrix}1&amp;2\\3&amp;4 \end{pmatrix} + \begin{pmatrix}5&amp;6\\7&amp;8 \end{pmatrix}=\begin{pmatrix}6&amp;8\\10&amp;12 \end{pmatrix}.
 \]</span></p>
 </div>
-<p><strong>Perkalian matriks dengan skalar</strong></p>
+</section>
+<section id="perkalian-matriks-dengan-skalar" class="level4">
+<h4 class="anchored" data-anchor-id="perkalian-matriks-dengan-skalar">Perkalian matriks dengan skalar</h4>
 <div id="def-matriks" class="theorem definition" title="Definisi">
 <p><span class="theorem-title"><strong>Definition 1.3</strong></span> <strong>Perkalian matriks dengan skalar</strong> Suatu matriks dapat dikalikan dengan skalar.Jika $A=(a_{ij})_{m n} $ dan k suatu skalar maka</p>
 <p><span class="math display">\[
@@ -449,7 +459,9 @@ kA=(ka_{ij})_{m \times n}
 <li><span class="math inline">\(4C=4\begin{pmatrix}5\\6\end{pmatrix}=\begin{pmatrix}20\\24\end{pmatrix}\)</span></li>
 <li><span class="math inline">\(A+C=\begin{pmatrix}1&amp;2\end{pmatrix}+\begin{pmatrix}5\\6\end{pmatrix}\)</span> tidak terdefinisi, karena ordo matriks A tidak sama dengan ordo matriks C.</li>
 </ol>
-<p><strong>Perkalian Matriks</strong></p>
+</section>
+<section id="perkalian-matriks" class="level4">
+<h4 class="anchored" data-anchor-id="perkalian-matriks">Perkalian Matriks</h4>
 <div id="def-matriks" class="theorem definition" title="Definisi">
 <p><span class="theorem-title"><strong>Definition 1.4</strong></span> <strong>Perkalian matriks</strong> Dua matriks A dan B dapat dikalikan (AB) jika dan hanya jika matriks A memiliki banyaknya kolom yang sama dengan banyaknya baris pada matriks B. Artinya jika <span class="math inline">\(A=(a_{ij})_{m \times n}\)</span> dan <span class="math inline">\(B= (b_{ij})_{n \times p}\)</span> maka</p>
 <p><span class="math display">\[
@@ -596,13 +608,1172 @@ AB=
 </ol>
 <p><strong>Catatan:</strong> Secara umum, <span class="math inline">\(AB \ne BA\)</span>.</p>
 </div>
+</section>
 <section id="matriks-putarantranspose" class="level4">
 <h4 class="anchored" data-anchor-id="matriks-putarantranspose">Matriks Putaran/Transpose</h4>
+<div id="def-matriks" class="theorem definition" title="Definisi">
+<p><span class="theorem-title"><strong>Definition 1.5</strong></span> <strong>Matriks Putaran (Transpose)</strong></p>
+<p>Sebuah matriks <span class="math inline">\(A\)</span> dapat ditransposkan menjadi <span class="math inline">\(A^T\)</span> dengan cara mengubah setiap elemen <span class="math inline">\(a_{ij}\)</span> menjadi <span class="math inline">\(a_{ji}\)</span>. Dengan kata lain, baris menjadi kolom dan kolom menjadi baris.</p>
+<p>Artinya, jika</p>
+<p><span class="math display">\[
+A = (a_{ij})_{m \times n},
+\]</span></p>
+<p>maka</p>
+<p><span class="math display">\[
+A^T = (a_{ji})_{n \times m}.
+\]</span></p>
+</div>
+<div class="theorem proposition">
+<p><strong>Sifat-sifat Matriks Transpose</strong></p>
+<p>Untuk matriks <span class="math inline">\(A\)</span> dan <span class="math inline">\(B\)</span> berukuran sesuai serta skalar <span class="math inline">\(k\)</span>, berlaku:</p>
+<ol type="1">
+<li><span class="math inline">\((A + B)^T = A^T + B^T\)</span></li>
+<li><span class="math inline">\((A^T)^T = A\)</span></li>
+<li><span class="math inline">\((kA)^T = kA^T\)</span></li>
+<li><span class="math inline">\((AB)^T = B^T A^T\)</span></li>
+</ol>
+</div>
+<div id="exm-1" class="theorem example" title="Contoh">
+<p><span class="theorem-title"><strong>Example 1.6</strong></span> Misalkan</p>
+<p><span class="math display">\[
+A =
+\begin{pmatrix}
+1 &amp; 3 &amp; 5 \\
+2 &amp; 4 &amp; 6
+\end{pmatrix}, \quad
+B =
+\begin{pmatrix}
+2 &amp; 0 \\
+3 &amp; 1 \\
+4 &amp; 5
+\end{pmatrix}, \quad
+C =
+\begin{pmatrix}
+1 &amp; 2 \\
+2 &amp; 3
+\end{pmatrix}.
+\]</span></p>
+<p>Ukuran: <span class="math inline">\(A\)</span> berukuran <span class="math inline">\(2\times 3\)</span>, <span class="math inline">\(B\)</span> berukuran <span class="math inline">\(3\times 2\)</span>, sehingga <span class="math inline">\(B^T\)</span> berukuran <span class="math inline">\(2\times 3\)</span>. Matriks <span class="math inline">\(C\)</span> berukuran <span class="math inline">\(2\times 2\)</span>, sehingga <span class="math inline">\(CB^T\)</span> terdefinisi dan hasilnya berukuran <span class="math inline">\(2\times 3\)</span>.</p>
+<p><strong>Tentukan:</strong> 1. <span class="math inline">\(A - B^T\)</span> 2. <span class="math inline">\(B^T A^T\)</span> 3. <span class="math inline">\(CB^T\)</span></p>
+<p><strong>Jawab.</strong></p>
+<section id="a-a---bt" class="level5 unnumbered">
+<h5 class="unnumbered anchored" data-anchor-id="a-a---bt">(a) <span class="math inline">\(A - B^T\)</span></h5>
+<p><span class="math display">\[
+B^T=
+\begin{pmatrix}
+2 &amp; 3 &amp; 4\\
+0 &amp; 1 &amp; 5
+\end{pmatrix}
+\]</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+A-B^T
+&amp;=
+\begin{pmatrix}1&amp;3&amp;5\\2&amp;4&amp;6\end{pmatrix}
+-
+\begin{pmatrix}2&amp;3&amp;4\\0&amp;1&amp;5\end{pmatrix}\\
+&amp;=
+\begin{pmatrix}-1&amp;0&amp;1\\2&amp;3&amp;1\end{pmatrix}.
+\end{aligned}
+\]</span></p>
+</section>
+<section id="b-bt-at" class="level5 unnumbered">
+<h5 class="unnumbered anchored" data-anchor-id="b-bt-at">(b) <span class="math inline">\(B^T A^T\)</span></h5>
+<p><span class="math display">\[
+A^T=
+\begin{pmatrix}
+1 &amp; 2\\
+3 &amp; 4\\
+5 &amp; 6
+\end{pmatrix}
+\]</span></p>
+<p>Contoh perhitungan satu elemen: <span class="math display">\[
+(B^T A^T)_{11} = (2,3,4)\cdot(1,3,5)=2+9+20=31.
+\]</span></p>
+<p><span class="math display">\[
+B^T A^T=
+\begin{pmatrix}
+2 &amp; 3 &amp; 4\\
+0 &amp; 1 &amp; 5
+\end{pmatrix}
+\begin{pmatrix}
+1 &amp; 2\\
+3 &amp; 4\\
+5 &amp; 6
+\end{pmatrix}
+=
+\boxed{
+\begin{pmatrix}
+31 &amp; 40\\
+28 &amp; 34
+\end{pmatrix}}
+\]</span></p>
+</section>
+<section id="c-cbt" class="level5 unnumbered">
+<h5 class="unnumbered anchored" data-anchor-id="c-cbt">(c) <span class="math inline">\(CB^T\)</span></h5>
+<p><span class="math display">\[
+CB^T=
+\begin{pmatrix}
+1 &amp; 2\\
+2 &amp; 3
+\end{pmatrix}
+\begin{pmatrix}
+2 &amp; 3 &amp; 4\\
+0 &amp; 1 &amp; 5
+\end{pmatrix}
+=
+\boxed{
+\begin{pmatrix}
+2 &amp; 5 &amp; 14\\
+4 &amp; 9 &amp; 23
+\end{pmatrix}}
+\]</span></p>
+</section>
+</div>
+</section>
+</section>
+<section id="operasi-baris-dasar-obd" class="level3" data-number="1.3.3">
+<h3 data-number="1.3.3" class="anchored" data-anchor-id="operasi-baris-dasar-obd"><span class="header-section-number">1.3.3</span> Operasi Baris Dasar (OBD)</h3>
+<p>Jika B merupakan sebuah matriks hasil serangkaian operasi baris dasar (operasi baris elementer) terhadap matriks A maka A dikatakan ekivalen terhadap matriks B.</p>
+<p>Ada tiga jenis operasi baris dasar terhadap suatu matriks, antara lain :</p>
+<ol type="1">
+<li>Saling menukarkan baris ke-i dan baris ke-j. Notasi : <span class="math inline">\(E_{ij}\)</span>.</li>
+<li>Mengalikan baris ke-i dengan suatu konstanta k. Notasi : <span class="math inline">\(E_{i(k)}\)</span>.</li>
+<li>Menempatkan baris ke-i dengan k kali baris ke-j ditambah baris ke-i. Notasi : <span class="math inline">\(E_{ij(k)}\)</span>.</li>
+</ol>
+<div id="exm-e12-visual" class="theorem example" title="Contoh">
+<p><span class="theorem-title"><strong>Example 1.7</strong></span> Misalkan</p>
+<div class="matrix-flow">
+<div class="matrix-box">
+<p><span class="math display">\[
+A=
+\begin{pmatrix}
+\color{#1f77b4}{1} &amp; \color{#1f77b4}{3} &amp; \color{#1f77b4}{5}\\
+\color{#d62728}{2} &amp; \color{#d62728}{1} &amp; \color{#d62728}{1}\\
+2 &amp; 4 &amp; 6
+\end{pmatrix}
+\]</span></p>
+<div class="matrix-label">
+A
+</div>
+</div>
+<div class="matrix-mid">
+<div class="matrix-op">
+<span class="math inline">\(E_{12}\)</span>
+</div>
+<div class="arrow">
+⟶
+</div>
+<div class="matrix-note">
+(tukar <span class="math inline">\(R_1\)</span> dan <span class="math inline">\(R_2\)</span>)
+</div>
+</div>
+<div class="matrix-box">
+<p><span class="math display">\[
+B=
+\begin{pmatrix}
+\color{#d62728}{2} &amp; \color{#d62728}{1} &amp; \color{#d62728}{1}\\
+\color{#1f77b4}{1} &amp; \color{#1f77b4}{3} &amp; \color{#1f77b4}{5}\\
+2 &amp; 4 &amp; 6
+\end{pmatrix}
+\]</span></p>
+<div class="matrix-label">
+B
+</div>
+</div>
+</div>
+</div>
+<div id="exm-e2-3-visual" class="theorem example" title="Contoh">
+<p><span class="theorem-title"><strong>Example 1.8</strong></span> &nbsp;</p>
+<div class="matrix-flow">
+<div class="matrix-box">
+<p><span class="math display">\[
+A=
+\begin{pmatrix}
+1 &amp; 3 &amp; 5\\
+\color{#2ca02c}{2} &amp; \color{#2ca02c}{1} &amp; \color{#2ca02c}{1}\\
+2 &amp; 4 &amp; 6
+\end{pmatrix}
+\]</span></p>
+<div class="matrix-label">
+A
+</div>
+</div>
+<div class="matrix-mid">
+<div class="matrix-op">
+<span class="math inline">\(E_{2(3)}\)</span>
+</div>
+<div class="arrow">
+⟶
+</div>
+<div class="matrix-note">
+(<span class="math inline">\(R_2 \leftarrow 3R_2\)</span>)
+</div>
+</div>
+<div class="matrix-box">
+<p><span class="math display">\[
+B=
+\begin{pmatrix}
+1 &amp; 3 &amp; 5\\
+\color{#d62728}{6} &amp; \color{#d62728}{3} &amp; \color{#d62728}{3}\\
+2 &amp; 4 &amp; 6
+\end{pmatrix}
+\]</span></p>
+<div class="matrix-label">
+B
+</div>
+</div>
+</div>
+</div>
+<div id="exm-e23m1-visual" class="theorem example" title="Contoh">
+<p><span class="theorem-title"><strong>Example 1.9</strong></span> &nbsp;</p>
+<div class="matrix-flow">
+<div class="matrix-box">
+<p><span class="math display">\[
+A=
+\begin{pmatrix}
+1 &amp; 3 &amp; 5\\
+\color{#1f77b4}{2} &amp; \color{#1f77b4}{1} &amp; \color{#1f77b4}{1}\\
+\color{#2ca02c}{2} &amp; \color{#2ca02c}{4} &amp; \color{#2ca02c}{6}
+\end{pmatrix}
+\]</span></p>
+<div class="matrix-label">
+A
+</div>
+</div>
+<div class="matrix-mid">
+<div class="matrix-op">
+<span class="math inline">\(E_{23(-1)}\)</span>
+</div>
+<div class="arrow">
+⟶
+</div>
+<div class="matrix-note">
+(<span class="math inline">\(R_2 \leftarrow R_2 - R_3\)</span>)
+</div>
+</div>
+<div class="matrix-box">
+<p><span class="math display">\[
+B=
+\begin{pmatrix}
+1 &amp; 3 &amp; 5\\
+\color{#d62728}{0} &amp; \color{#d62728}{-3} &amp; \color{#d62728}{-5}\\
+2 &amp; 4 &amp; 6
+\end{pmatrix}
+\]</span></p>
+<div class="matrix-label">
+B
+</div>
+</div>
+</div>
+</div>
+<p>Setelah memahami bagaimana matriks elementer bekerja pada suatu matriks, selanjutnya kita akan menggunakan operasi baris dasar (OBD) secara berurutan untuk mengubah suatu matriks menjadi bentuk segitiga atas dan segitiga bawah.</p>
+<div id="exm-obd-chain" class="theorem example" title="Contoh">
+<p><span class="theorem-title"><strong>Example 1.10</strong></span> Misalkan</p>
+<p><span class="math display">\[
+A =
+\begin{pmatrix}
+1 &amp; 3 &amp; 5\\
+2 &amp; 5 &amp; 1\\
+2 &amp; 4 &amp; 1
+\end{pmatrix}.
+\]</span></p>
+<ol type="a">
+<li>Dengan menggunakan OBD, bentuklah matriks segitiga atas dari <span class="math inline">\(A\)</span>.<br>
+</li>
+<li>Dengan menggunakan OBD, bentuklah matriks segitiga bawah dari <span class="math inline">\(A\)</span>.</li>
+</ol>
+<hr>
+<section id="jawab" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="jawab">Jawab</h3>
+<section id="a-matriks-segitiga-atas" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="a-matriks-segitiga-atas">(a) Matriks segitiga atas</h4>
+<p><span class="math display">\[
+\begin{aligned}
+A
+&amp;=
+\begin{pmatrix}
+1 &amp; 3 &amp; 5\\
+2 &amp; 5 &amp; 1\\
+2 &amp; 4 &amp; 1
+\end{pmatrix}
+\xrightarrow{E_{21(-2)}}
+\begin{pmatrix}
+1 &amp; 3 &amp; 5\\
+0 &amp; -1 &amp; -9\\
+2 &amp; 4 &amp; 1
+\end{pmatrix}
+\xrightarrow{E_{31(-2)}}
+\begin{pmatrix}
+1 &amp; 3 &amp; 5\\
+0 &amp; -1 &amp; -9\\
+0 &amp; -2 &amp; -9
+\end{pmatrix}
+\xrightarrow{E_{32(-2)}}
+\begin{pmatrix}
+1 &amp; 3 &amp; 5\\
+0 &amp; -1 &amp; -9\\
+0 &amp; 0 &amp; 9
+\end{pmatrix}.
+\end{aligned}
+\]</span></p>
+<hr>
+</section>
+<section id="b-matriks-segitiga-bawah" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="b-matriks-segitiga-bawah">(b) Matriks segitiga bawah</h4>
+<p><span class="math display">\[
+\begin{aligned}
+A
+&amp;=
+\begin{pmatrix}
+1 &amp; 3 &amp; 5\\
+2 &amp; 5 &amp; 1\\
+2 &amp; 4 &amp; 1
+\end{pmatrix}
+\xrightarrow{E_{23(-1)}}
+\begin{pmatrix}
+1 &amp; 3 &amp; 5\\
+0 &amp; 1 &amp; 0\\
+2 &amp; 4 &amp; 1
+\end{pmatrix}
+\xrightarrow{E_{13(-5)}}
+\begin{pmatrix}
+-9 &amp; -17 &amp; 0\\
+0 &amp; 1 &amp; 0\\
+2 &amp; 4 &amp; 1
+\end{pmatrix}
+\xrightarrow{E_{12(17)}}
+\begin{pmatrix}
+-9 &amp; 0 &amp; 0\\
+0 &amp; 1 &amp; 0\\
+2 &amp; 4 &amp; 1
+\end{pmatrix}.
+\end{aligned}
+\]</span></p>
+</section>
+</section>
+</div>
+</section>
+<section id="determinan-matriks" class="level3" data-number="1.3.4">
+<h3 data-number="1.3.4" class="anchored" data-anchor-id="determinan-matriks"><span class="header-section-number">1.3.4</span> Determinan Matriks</h3>
+<p>Dalam aljabar linear, determinan digunakan untuk mengetahui apakah suatu matriks persegi dapat dibalik (invertible) atau tidak. Nilai determinan juga berkaitan dengan perubahan skala suatu transformasi linear.</p>
+<p>Determinan adalah suatu nilai skalar yang didefinisikan untuk <strong>matriks segi</strong> dan digunakan untuk menentukan apakah matriks tersebut memiliki invers. Selain itu, determinan juga memiliki peranan penting dalam sistem persamaan linear dan transformasi linear.</p>
+<div id="def-determinan-2x2" class="theorem definition" title="Definisi">
+<p><span class="theorem-title"><strong>Definition 1.6</strong></span> <strong>Determinan matriks ukuran <span class="math inline">\(2 \times 2\)</span></strong></p>
+<p>Determinan matriks</p>
+<p><span class="math display">\[
+A =
+\begin{pmatrix}
+a &amp; b \\
+c &amp; d
+\end{pmatrix}
+\]</span></p>
+<p>didefinisikan sebagai</p>
+<p><span class="math display">\[
+\det(A) = |A| = ad - bc.
+\]</span></p>
+</div>
+<p>Berikut ini diberikan contoh perhitungan determinan matriks berukuran <span class="math inline">\(2 \times 2\)</span> menggunakan rumus yang telah didefinisikan.</p>
+<div id="exm-det-2x2" class="theorem example" title="Contoh">
+<p><span class="theorem-title"><strong>Example 1.11</strong></span> Misalkan</p>
+<p><span class="math display">\[
+A =
+\begin{pmatrix}
+1 &amp; 3 \\
+2 &amp; 4
+\end{pmatrix}.
+\]</span></p>
+<p>Tentukan determinan matriks <span class="math inline">\(A\)</span>.</p>
+<hr>
+<section id="jawab-1" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="jawab-1">Jawab</h3>
+<p><span class="math display">\[
+\det(A) = |A|
+= (1)(4) - (3)(2)
+= 4 - 6
+= -2.
+\]</span></p>
+</section>
+</div>
+<section id="metode-sarrus" class="level4">
+<h4 class="anchored" data-anchor-id="metode-sarrus">Metode Sarrus</h4>
+<div id="def-determinan-3x3-sarrus" class="theorem definition" title="Definisi (Determinan matriks ukuran $3 \times 3$ dengan metode Sarrus)">
+<p><span class="theorem-title"><strong>Definition 1.7</strong></span> Misalkan <span class="math inline">\(A\)</span> adalah matriks berukuran <span class="math inline">\(3 \times 3\)</span> yang didefinisikan sebagai</p>
+<p><span class="math display">\[
+A =
+\begin{pmatrix}
+a &amp; b &amp; c \\
+d &amp; e &amp; f \\
+g &amp; h &amp; i
+\end{pmatrix}.
+\]</span></p>
+<p>Dengan menggunakan metode Sarrus, determinan matriks <span class="math inline">\(A\)</span> adalah</p>
+<p><span class="math display">\[
+\det(A) = |A|
+= (aei + bfg + cdh) - (ceg + afh + bdi).
+\]</span></p>
+</div>
+<hr>
+<p>Perhatikan bahwa nilai determinan dengan menggunakan metode Sarrus dapat diperoleh dengan langkah berikut:</p>
+<p>Misalkan</p>
+<p><span class="math display">\[
+A=
+\begin{pmatrix}
+a &amp; b &amp; c\\
+d &amp; e &amp; f\\
+g &amp; h &amp; i
+\end{pmatrix}.
+\]</span></p>
+<p><strong>Tambahkan dua kolom pertama:</strong></p>
+<p><span class="math display">\[
+\left(
+\begin{array}{ccc|cc}
+a &amp; b &amp; c &amp; a &amp; b\\
+d &amp; e &amp; f &amp; d &amp; e\\
+g &amp; h &amp; i &amp; g &amp; h
+\end{array}
+\right)
+\]</span></p>
+<hr>
+<p><strong>Diagonal dari kiri atas ke kanan bawah (warna biru)</strong></p>
+<p>Kalikan setiap 3 bilangan lalu gabungkan dengan tanda “+”</p>
+<p><span class="math display">\[
+\left(
+\begin{array}{ccc|cc}
+\color{blue}{a} &amp; \color{blue}{b} &amp; \color{blue}{c} &amp; a &amp; b\\
+d &amp; \color{blue}{e} &amp; \color{blue}{f} &amp; \color{blue}{d} &amp; e\\
+g &amp; h &amp; \color{blue}{i} &amp; \color{blue}{g} &amp; \color{blue}{h}
+\end{array}
+\right)
+\]</span></p>
+<p><strong>Hasil:</strong> <span class="math display">\[
+aei + bfg + cdh
+\]</span></p>
+<hr>
+<p><strong>Diagonal dari kiri bawah ke kanan atas (warna merah)</strong></p>
+<p>Kalikan setiap 3 bilangan lalu gabungkan dengan tanda “+”</p>
+<p><span class="math display">\[
+\left(
+\begin{array}{ccc|cc}
+a &amp; b &amp; \color{red}{c} &amp; \color{red}{a} &amp; \color{red}{b}\\
+d &amp; \color{red}{e} &amp; \color{red}{f} &amp; \color{red}{d} &amp; e\\
+\color{red}{g} &amp; \color{red}{h} &amp; \color{red}{i} &amp; g &amp; h
+\end{array}
+\right)
+\]</span></p>
+<p><strong>Hasil:</strong> <span class="math display">\[
+gec - hfa - idb
+\]</span></p>
+<hr>
+<p><strong>Determinan</strong></p>
+<p><span class="math display">\[
+\det(A)
+=
+( \color{blue}{aei + bfg + cdh} )
+-
+( \color{red}{gec + hfa + idb} ).
+\]</span></p>
+<p>Metode Sarrus dinamai dari Pierre Frédéric Sarrus (1798–1861), seorang profesor matematika di University of Strasbourg, Perancis. Metode ini diperkenalkan pada abad ke-19 sebagai cara cepat menghitung determinan matriks berukuran <span class="math inline">\(3 \times 3\)</span>. Metode ini bersifat khusus dan tidak dapat digunakan untuk matriks berukuran lebih besar.</p>
+<p>Selain dengan metode Sarrus, cara lain untuk menghitung nilai determinan yaitu dengan metode minor-kofaktoratau reduksi baris.</p>
+</section>
+<section id="metode-minor-kofaktor" class="level4">
+<h4 class="anchored">Metode Minor-Kofaktor</h4>
+<div id="def-determinan-3x3-kofaktor" class="theorem definition" title="Definisi (Determinan matriks ukuran $3 \times 3$ dengan metode minor kofaktor)">
+<p><span class="theorem-title"><strong>Definition 1.8</strong></span> Misalkan <span class="math inline">\(A\)</span> adalah matriks berukuran <span class="math inline">\(3 \times 3\)</span> yang didefinisikan sebagai</p>
+<p><span class="math display">\[
+A =
+\begin{pmatrix}
+a_{11} &amp; a_{12} &amp; a_{13} \\
+a_{21} &amp; a_{22} &amp; a_{23} \\
+a_{31} &amp; a_{32} &amp; a_{33}
+\end{pmatrix}.
+\]</span></p>
+<p>Untuk setiap elemen <span class="math inline">\(a_{ij}\)</span>, minor <span class="math inline">\(A_{ij}\)</span> adalah determinan dari matriks yang diperoleh dengan menghilangkan baris ke-<span class="math inline">\(i\)</span> dan kolom ke-<span class="math inline">\(j\)</span>.</p>
+<p>Dengan menggunakan metode minor kofaktor, determinan matriks <span class="math inline">\(A\)</span> dapat dihitung sebagai berikut.</p>
+<hr>
+<p><strong>a. Ekspansi menurut baris ke-<span class="math inline">\(i\)</span></strong></p>
+<p><span class="math display">\[
+\det(A) = |A|
+=
+(-1)^{i+1} a_{i1} |A_{i1}|
++
+(-1)^{i+2} a_{i2} |A_{i2}|
++
+(-1)^{i+3} a_{i3} |A_{i3}|,
+\]</span></p>
+<p>untuk setiap baris <span class="math inline">\(i\)</span>.</p>
+<hr>
+<p><strong>b. Ekspansi menurut kolom ke-<span class="math inline">\(j\)</span></strong></p>
+<p><span class="math display">\[
+\det(A) = |A|
+=
+(-1)^{1+j} a_{1j} |A_{1j}|
++
+(-1)^{2+j} a_{2j} |A_{2j}|
++
+(-1)^{3+j} a_{3j} |A_{3j}|,
+\]</span></p>
+<p>untuk setiap kolom <span class="math inline">\(j\)</span>.</p>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Pola Tanda Kofaktor">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Pola Tanda Kofaktor
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Tanda kofaktor mengikuti pola</p>
+<p><span class="math display">\[
+(-1)^{i+j}
+\]</span></p>
+<p>yang membentuk pola tanda berikut:</p>
+<p><span class="math display">\[
+\begin{pmatrix}
++ &amp; - &amp; + \\
+- &amp; + &amp; - \\
++ &amp; - &amp; +
+\end{pmatrix}
+\]</span></p>
+<p>Artinya: - Jika <span class="math inline">\(i+j\)</span> genap → tanda positif. - Jika <span class="math inline">\(i+j\)</span> ganjil → tanda negatif.</p>
+</div>
+</div>
+<div id="exm-det-3x3" class="theorem example" title="Contoh">
+<p><span class="theorem-title"><strong>Example 1.12</strong></span> Hitunglah determinan matriks berikut</p>
+<p><span class="math display">\[
+A=
+\begin{pmatrix}
+1 &amp; 2 &amp; 0\\
+3 &amp; 2 &amp; 3\\
+4 &amp; 1 &amp; 1
+\end{pmatrix}.
+\]</span></p>
+<hr>
+<section id="jawab-2" class="level3" data-number="1.3.5">
+<h3 data-number="1.3.5" class="anchored" data-anchor-id="jawab-2"><span class="header-section-number">1.3.5</span> Jawab</h3>
+<hr>
+</section>
+<section id="cara-1-dengan-metode-sarrus" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="cara-1-dengan-metode-sarrus">Cara 1 : Dengan metode Sarrus</h3>
+<p>Tambahkan dua kolom pertama:</p>
+<p><span class="math display">\[
+\left(
+\begin{array}{ccc|cc}
+1 &amp; 2 &amp; 0 &amp; 1 &amp; 2\\
+3 &amp; 2 &amp; 3 &amp; 3 &amp; 2\\
+4 &amp; 1 &amp; 1 &amp; 4 &amp; 1
+\end{array}
+\right)
+\]</span></p>
+<p><span class="math display">\[
+|A|
+=
+(1\cdot2\cdot1 + 2\cdot3\cdot4 + 0\cdot3\cdot1)
+-
+(0\cdot2\cdot4 + 1\cdot3\cdot1 + 2\cdot3\cdot1)
+\]</span></p>
+<p><span class="math display">\[
+=
+(2 + 24 + 0)
+-
+(0 + 3 + 6)
+\]</span></p>
+<p><span class="math display">\[
+= 26 - 9
+= 17.
+\]</span></p>
+<hr>
+</section>
+<section id="cara-2-dengan-metode-minor-kofaktor" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="cara-2-dengan-metode-minor-kofaktor">Cara 2 : Dengan metode Minor Kofaktor</h3>
+<p>Pilih baris pertama.</p>
+<p><span class="math display">\[
+\det(A)
+=
+(-1)^{1+1} a_{11}|A_{11}|
++
+(-1)^{1+2} a_{12}|A_{12}|
++
+(-1)^{1+3} a_{13}|A_{13}|
+\]</span></p>
+<p><span class="math display">\[
+=
+(1)
+\begin{vmatrix}
+2 &amp; 3\\
+1 &amp; 1
+\end{vmatrix}
+-
+(2)
+\begin{vmatrix}
+3 &amp; 3\\
+4 &amp; 1
+\end{vmatrix}
++
+(0)
+\begin{vmatrix}
+3 &amp; 2\\
+4 &amp; 1
+\end{vmatrix}
+\]</span></p>
+<p><span class="math display">\[
+=
+1(2\cdot1 - 3\cdot1)
+-
+2(3\cdot1 - 3\cdot4)
++
+0
+\]</span></p>
+<p><span class="math display">\[
+=
+1(2 - 3)
+-
+2(3 - 12)
+\]</span></p>
+<p><span class="math display">\[
+=
+-1 + 18
+= 17.
+\]</span></p>
+</section>
+</div>
+<div id="def-determinan-nxn-kofaktor" class="theorem definition" title="Definisi (Determinan matriks ukuran $n \times n$ dengan metode minor kofaktor)">
+<p><span class="theorem-title"><strong>Definition 1.9</strong></span> Misalkan <span class="math inline">\(A\)</span> adalah matriks berukuran <span class="math inline">\(n \times n\)</span> yang didefinisikan sebagai</p>
+<p><span class="math display">\[
+A =
+\begin{pmatrix}
+a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\
+a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2n} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+a_{n1} &amp; a_{n2} &amp; \cdots &amp; a_{nn}
+\end{pmatrix}.
+\]</span></p>
+<p>Untuk setiap elemen <span class="math inline">\(a_{ij}\)</span>, minor <span class="math inline">\(A_{ij}\)</span> adalah determinan dari matriks yang diperoleh dengan menghilangkan baris ke-<span class="math inline">\(i\)</span> dan kolom ke-<span class="math inline">\(j\)</span>.</p>
+<p>Dengan menggunakan metode minor kofaktor, determinan matriks <span class="math inline">\(A\)</span> dapat dihitung sebagai berikut.</p>
+<hr>
+<p><strong>a. Ekspansi menurut baris ke-<span class="math inline">\(i\)</span></strong></p>
+<p><span class="math display">\[
+\det(A) = |A|
+=
+(-1)^{i+1} a_{i1} |A_{i1}|
++
+(-1)^{i+2} a_{i2} |A_{i2}|
++ \cdots +
+(-1)^{i+n} a_{in} |A_{in}|,
+\]</span></p>
+<p>untuk setiap baris <span class="math inline">\(i\)</span>.</p>
+<hr>
+<p><strong>b. Ekspansi menurut kolom ke-<span class="math inline">\(j\)</span></strong></p>
+<p><span class="math display">\[
+\det(A) = |A|
+=
+(-1)^{1+j} a_{1j} |A_{1j}|
++
+(-1)^{2+j} a_{2j} |A_{2j}|
++ \cdots +
+(-1)^{n+j} a_{nj} |A_{nj}|,
+\]</span></p>
+<p>untuk setiap kolom <span class="math inline">\(j\)</span>.</p>
+</div>
+<p>Perhatikan bahwa faktor tanda <span class="math inline">\((-1)^{i+j}\)</span> membentuk pola matriks berikut</p>
+<p><span class="math display">\[
+\begin{pmatrix}
+(-1)^{1+1} &amp; (-1)^{1+2} &amp; (-1)^{1+3} &amp; \cdots \\
+(-1)^{2+1} &amp; (-1)^{2+2} &amp; (-1)^{2+3} &amp; \cdots \\
+(-1)^{3+1} &amp; (-1)^{3+2} &amp; (-1)^{3+3} &amp; \cdots \\
+\vdots &amp; \vdots &amp; \vdots &amp; \ddots
+\end{pmatrix}
+=
+\begin{pmatrix}
++ &amp; - &amp; + &amp; \cdots \\
+- &amp; + &amp; - &amp; \cdots \\
++ &amp; - &amp; + &amp; \cdots \\
+\vdots &amp; \vdots &amp; \vdots &amp; \ddots
+\end{pmatrix}.
+\]</span></p>
+<hr>
+<p>Jika dipilih baris ke-1, maka</p>
+<p><span class="math display">\[
+|A|
+=
++ a_{11}|A_{11}|
+- a_{12}|A_{12}|
++ a_{13}|A_{13}|
+- \cdots
+\]</span></p>
+<p>Jika dipilih kolom ke-2, maka</p>
+<p><span class="math display">\[
+|A|
+=
+- a_{12}|A_{12}|
++ a_{22}|A_{22}|
+- a_{32}|A_{32}|
++ \cdots
+\]</span></p>
+<div class="callout callout-style-default callout-important callout-titled" title="Sifat-sifat Determinan">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Sifat-sifat Determinan
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div class="det-grid">
+<section id="transpose" class="level4 det-card">
+<h4 class="anchored" data-anchor-id="transpose">🔁 Transpose</h4>
+<ol type="1">
+<li><span class="math inline">\(\det(A) = \det(A^T)\)</span>.</li>
+</ol>
+</section>
+<section id="operasi-bariskolom-paling-sering-dipakai-saat-eliminasi" class="level4 det-card">
+<h4 class="anchored" data-anchor-id="operasi-bariskolom-paling-sering-dipakai-saat-eliminasi">🔄 Operasi Baris/Kolom (paling sering dipakai saat eliminasi)</h4>
+<ol start="2" type="1">
+<li><p><strong>Tukar dua baris/kolom</strong> (<span class="math inline">\(A \to B\)</span>)<br>
+<span class="det-key"><span class="math inline">\(\det(B) = -\det(A)\)</span></span></p></li>
+<li><p><strong>Kali satu baris/kolom dengan skalar <span class="math inline">\(k\)</span></strong> (<span class="math inline">\(A \to B\)</span>)<br>
+<span class="det-key"><span class="math inline">\(\det(B) = k\,\det(A)\)</span></span></p></li>
+<li><p><strong>Tambah <span class="math inline">\(k\)</span> kali baris/kolom lain ke suatu baris/kolom</strong> (<span class="math inline">\(A \to B\)</span>)<br>
+<span class="det-key"><span class="math inline">\(\det(B) = \det(A)\)</span></span></p></li>
+</ol>
+</section>
+<section id="kondisi-determinan-nol" class="level4 det-card">
+<h4 class="anchored" data-anchor-id="kondisi-determinan-nol">🧯 Kondisi determinan nol</h4>
+<ol start="5" type="1">
+<li><p>Jika ada <strong>baris/kolom nol</strong>, maka <span class="det-key"><span class="math inline">\(\det(A)=0\)</span></span>.</p></li>
+<li><p>Jika ada dua baris/kolom <strong>saling kelipatan</strong> (dependen), maka <span class="det-key"><span class="math inline">\(\det(A)=0\)</span></span>.</p></li>
+</ol>
+</section>
+<section id="matriks-segitiga" class="level4 det-card">
+<h4 class="anchored" data-anchor-id="matriks-segitiga">📐 Matriks segitiga</h4>
+<ol start="7" type="1">
+<li>Jika <span class="math inline">\(A\)</span> matriks segitiga atas/bawah, maka<br>
+<span class="det-key"><span class="math inline">\(\det(A)=a_{11}a_{22}\cdots a_{nn}\)</span></span><br>
+(hasil kali elemen diagonal utama)</li>
+</ol>
+</section>
+<section id="perkalian-matriks-dan-skala" class="level4 det-card">
+<h4 class="anchored" data-anchor-id="perkalian-matriks-dan-skala">🧩 Perkalian matriks dan skala</h4>
+<ol start="8" type="1">
+<li><p>Untuk matriks berordo sama:<br>
+<span class="det-key"><span class="math inline">\(\det(AB)=\det(A)\det(B)\)</span></span></p></li>
+<li><p>Untuk skalar <span class="math inline">\(k\)</span> dan <span class="math inline">\(A\)</span> berordo <span class="math inline">\(n\)</span>:<br>
+<span class="det-key"><span class="math inline">\(\det(kA)=k^n\det(A)\)</span></span></p></li>
+</ol>
+</section>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="matriks-invers" class="level3" data-number="1.3.6">
+<h3 data-number="1.3.6" class="anchored" data-anchor-id="matriks-invers"><span class="header-section-number">1.3.6</span> Matriks Invers</h3>
+<p>Pada pembahasan sebelumnya, kita telah mempelajari operasi dasar pada matriks dan determinan. Selanjutnya, kita akan membahas konsep yang sangat penting dalam aljabar linear, yaitu matriks invers.</p>
+<p>Secara intuitif, matriks invers dapat dipahami sebagai “kebalikan” dari suatu matriks terhadap operasi perkalian. Jika suatu matriks memiliki invers, maka matriks tersebut dapat digunakan untuk menyelesaikan sistem persamaan linear dan berbagai permasalahan komputasi lainnya.</p>
+<p>Konsep ini mirip dengan bilangan real: jika <span class="math inline">\(a \neq 0\)</span>, maka terdapat <span class="math inline">\(a^{-1}\)</span> sehingga<br>
+<span class="math display">\[
+a \cdot a^{-1} = 1.
+\]</span></p>
+<p>Demikian pula pada matriks, tetapi dengan syarat tertentu yang akan kita pelajari pada bagian ini.</p>
+<hr>
+<div id="def-matriks-invers" class="theorem definition" title="(Matriks Invers)">
+<p><span class="theorem-title"><strong>Definition 1.10</strong></span> <strong>Matriks invers</strong></p>
+<p>Suatu matriks persegi <span class="math inline">\(A\)</span> dikatakan mempunyai <strong>invers</strong> jika terdapat matriks <span class="math inline">\(B\)</span> berordo sama sehingga</p>
+<p><span class="math display">\[
+AB = BA = I,
+\]</span></p>
+<p>dengan <span class="math inline">\(I\)</span> adalah matriks identitas.</p>
+<p>Matriks <span class="math inline">\(B\)</span> dinamakan <strong>matriks invers</strong> dari <span class="math inline">\(A\)</span> dan ditulis</p>
+<p><span class="math display">\[
+B = A^{-1}.
+\]</span></p>
+</div>
+<p><strong>Matriks taksingular</strong> adalah matriks segi yang memiliki nilai determinan taknol. Setiap matriks taksingular A memiliki matriks invers (A-1) yang tunggal. <strong>Matriks singular</strong> adalah matriks segi yang memiliki nilai determinan nol. Dengan demikian matriks singular tidak memiliki invers.</p>
+<p>Jika <span class="math inline">\(A\)</span> dan <span class="math inline">\(B\)</span> adalah dua matriks taksingular maka berlaku</p>
+<div id="prop-sifat-invers" class="theorem proposition" title="Proposisi (Sifat-Sifat Matriks Invers)">
+<p>Jika <span class="math inline">\(A\)</span> dan <span class="math inline">\(B\)</span> adalah dua matriks taksingular (memiliki invers), maka berlaku sifat-sifat berikut:</p>
+<ol type="1">
+<li><p>Invers dari invers adalah matriks itu sendiri: <span class="math display">\[
+\left(A^{-1}\right)^{-1} = A
+\]</span></p></li>
+<li><p>Invers dari hasil kali dua matriks: <span class="math display">\[
+(AB)^{-1} = B^{-1} A^{-1}
+\]</span></p></li>
+<li><p>Invers dari transpose suatu matriks: <span class="math display">\[
+(A^T)^{-1} = (A^{-1})^T
+\]</span></p></li>
+</ol>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>💡 <strong>Catatan Penting</strong></p>
+<p>Urutan pada sifat ke-2 terbalik.<br>
+Invers dari <span class="math inline">\(AB\)</span> bukan <span class="math inline">\(A^{-1}B^{-1}\)</span>, tetapi</p>
+<p><span class="math display">\[
+(AB)^{-1} = B^{-1}A^{-1}.
+\]</span></p>
+<p>Ini sering menjadi sumber kesalahan dalam perhitungan.</p>
+</div>
+</div>
+<div id="def-invers-2x2" class="theorem definition" title="(Matriks Invers Ukuran 2×2)">
+<p><span class="theorem-title"><strong>Definition 1.11</strong></span> <strong>Matriks Invers Ukuran 2×2</strong></p>
+<p>Jika</p>
+<p><span class="math display">\[
+A =
+\begin{pmatrix}
+a &amp; b \\
+c &amp; d
+\end{pmatrix},
+\]</span></p>
+<p>dengan <span class="math inline">\(\det(A)=ad-bc \neq 0\)</span>, maka invers matriks <span class="math inline">\(A\)</span> adalah</p>
+<p><span class="math display">\[
+A^{-1}
+=
+\frac{1}{ad-bc}
+\begin{pmatrix}
+d &amp; -b \\
+-c &amp; a
+\end{pmatrix}.
+\]</span></p>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="badge bg-primary">Rumus penting</span></p>
+<p>Untuk matriks <span class="math inline">\(2 \times 2\)</span>, invers diperoleh dengan: - Menukar <span class="math inline">\(a\)</span> dan <span class="math inline">\(d\)</span> - Mengubah tanda <span class="math inline">\(b\)</span> dan <span class="math inline">\(c\)</span> - Membagi dengan determinan <span class="math inline">\(ad-bc\)</span></p>
+</div>
+</div>
+<p>Perhatikan contoh berikut.</p>
+<div id="exm-1" class="theorem example" title="Contoh">
+<p><span class="theorem-title"><strong>Example 1.13</strong></span> Misalkan <span class="math inline">\(A=\begin{pmatrix}1&amp;2\\3&amp;4 \end{pmatrix}\)</span> maka <span class="math display">\[
+A^{-1}=\frac{1}{(1)(4)-(3)(2)}
+\begin{pmatrix}
+4 &amp; -3\\
+-2 &amp; 1
+\end{pmatrix}= \begin{pmatrix}
+-2 &amp; \tfrac{3}{2}\\
+1 &amp; -\tfrac{1}{2}
+\end{pmatrix}.
+\]</span></p>
+</div>
+<section id="metode-matriks-adjoin" class="level4">
+<h4 class="anchored" data-anchor-id="metode-matriks-adjoin">Metode Matriks Adjoin</h4>
+<div id="def-invers-nxn" class="theorem definition" title="Definisi 5.5.3 (Matriks Invers Ukuran $n \times n$ dengan Metode Adjoin)">
+<p><span class="theorem-title"><strong>Definition 1.12</strong></span> <strong>Matriks Invers Ukuran <span class="math inline">\(n \times n\)</span> dengan Metode Adjoin</strong></p>
+<p>Misalkan <span class="math inline">\(A\)</span> adalah matriks taksingular berordo <span class="math inline">\(n \times n\)</span> yang didefinisikan sebagai</p>
+<p><span class="math display">\[
+A =
+\begin{pmatrix}
+a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\
+a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2n} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+a_{n1} &amp; a_{n2} &amp; \cdots &amp; a_{nn}
+\end{pmatrix}.
+\]</span></p>
+<p>Misalkan <span class="math inline">\(c_{ij}\)</span> adalah kofaktor dari elemen <span class="math inline">\(a_{ij}\)</span>, yaitu</p>
+<p><span class="math display">\[
+c_{ij} = (-1)^{i+j}\det(M_{ij}),
+\]</span></p>
+<p>dengan <span class="math inline">\(M_{ij}\)</span> adalah determinan anak matriks yang diperoleh dengan menghilangkan baris ke-<span class="math inline">\(i\)</span> dan kolom ke-<span class="math inline">\(j\)</span>.</p>
+<p>Dengan metode matriks adjoin diperoleh</p>
+<p><span class="math display">\[
+A^{-1}
+=
+\frac{1}{\det(A)}\,\operatorname{Adj}(A)
+=
+\frac{1}{\det(A)}\,C^T,
+\]</span></p>
+<p>dengan <span class="math inline">\(C\)</span> adalah matriks kofaktor</p>
+<p><span class="math display">\[
+C =
+\begin{pmatrix}
++ c_{11} &amp; - c_{12} &amp; + c_{13} &amp; \cdots \\
+- c_{21} &amp; + c_{22} &amp; - c_{23} &amp; \cdots \\
++ c_{31} &amp; - c_{32} &amp; + c_{33} &amp; \cdots \\
+\vdots &amp; \vdots &amp; \vdots &amp; \ddots
+\end{pmatrix}.
+\]</span></p>
+</div>
+<div class="callout callout-style-default callout-important callout-titled" title="Langkah inti metode adjoin">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Langkah inti metode adjoin
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>Hitung semua kofaktor <span class="math inline">\(c_{ij}\)</span>.<br>
+</li>
+<li>Susun matriks kofaktor <span class="math inline">\(C\)</span>.<br>
+</li>
+<li>Transposkan menjadi <span class="math inline">\(C^T\)</span> (adjoin).<br>
+</li>
+<li>Bagi dengan <span class="math inline">\(\det(A)\)</span>.</li>
+</ol>
+</div>
+</div>
+<div id="ex-invers-3x3-adjoin" class="theorem example" title="Contoh (Invers matriks 3×3 dengan metode adjoin)">
+<p><strong>Tentukan invers matriks berikut:</strong></p>
+<p><span class="math display">\[
+A=
+\begin{pmatrix}
+1 &amp; 2 &amp; 0\\
+3 &amp; 2 &amp; 3\\
+4 &amp; 1 &amp; 1
+\end{pmatrix}.
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Pada contoh sebelumnya diketahui <span class="math display">\[
+|A|=\det(A)=17.
+\]</span> Karena <span class="math inline">\(\det(A)\neq 0\)</span>, maka <span class="math inline">\(A\)</span> <strong>taksingular</strong> dan memiliki invers.</p>
+</div>
+</div>
+<p><strong>Langkah 1 — Matriks kofaktor <span class="math inline">\(C\)</span></strong></p>
+<div class="callout callout-style-default callout-important callout-titled" title="Klik untuk melihat perhitungan kofaktor (dibuka-tutup)">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Klik untuk melihat perhitungan kofaktor (dibuka-tutup)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Kita hitung <span class="math inline">\(c_{ij}=(-1)^{i+j}\det(M_{ij})\)</span>.</p>
+<p><strong>Baris 1</strong> - <span class="math inline">\(c_{11}=+\det\begin{pmatrix}2&amp;3\\1&amp;1\end{pmatrix}=2\cdot1-3\cdot1=-1\)</span> - <span class="math inline">\(c_{12}=-\det\begin{pmatrix}3&amp;3\\4&amp;1\end{pmatrix}=-(3\cdot1-3\cdot4)=-(3-12)=9\)</span> - <span class="math inline">\(c_{13}=+\det\begin{pmatrix}3&amp;2\\4&amp;1\end{pmatrix}=3\cdot1-2\cdot4=3-8=-5\)</span></p>
+<p><strong>Baris 2</strong> - <span class="math inline">\(c_{21}=-\det\begin{pmatrix}2&amp;0\\1&amp;1\end{pmatrix}=-(2\cdot1-0\cdot1)=-2\)</span> - <span class="math inline">\(c_{22}=+\det\begin{pmatrix}1&amp;0\\4&amp;1\end{pmatrix}=1\cdot1-0\cdot4=1\)</span> - <span class="math inline">\(c_{23}=-\det\begin{pmatrix}1&amp;2\\4&amp;1\end{pmatrix}=-(1\cdot1-2\cdot4)=-(1-8)=7\)</span></p>
+<p><strong>Baris 3</strong> - <span class="math inline">\(c_{31}=+\det\begin{pmatrix}2&amp;0\\2&amp;3\end{pmatrix}=2\cdot3-0\cdot2=6\)</span> - <span class="math inline">\(c_{32}=-\det\begin{pmatrix}1&amp;0\\3&amp;3\end{pmatrix}=-(1\cdot3-0\cdot3)=-3\)</span> - <span class="math inline">\(c_{33}=+\det\begin{pmatrix}1&amp;2\\3&amp;2\end{pmatrix}=1\cdot2-2\cdot3=2-6=-4\)</span></p>
+</div>
+</div>
+</div>
+<p>Sehingga matriks kofaktor adalah</p>
+<p><span class="math display">\[
+C=
+\begin{pmatrix}
+-1 &amp; 9 &amp; -5\\
+-2 &amp; 1 &amp; 7\\
+6 &amp; -3 &amp; -4
+\end{pmatrix}.
+\]</span></p>
+<p><strong>Langkah 2 — Adjoin dan invers</strong></p>
+<p>Adjoin adalah transpose dari matriks kofaktor:</p>
+<p><span class="math display">\[
+\operatorname{Adj}(A)=C^T=
+\begin{pmatrix}
+-1 &amp; -2 &amp; 6\\
+9 &amp; 1 &amp; -3\\
+-5 &amp; 7 &amp; -4
+\end{pmatrix}.
+\]</span></p>
+<p>Maka invers:</p>
+<p><span class="math display">\[
+A^{-1}=\frac{1}{|A|}C^T
+=\frac{1}{17}
+\begin{pmatrix}
+-1 &amp; -2 &amp; 6\\
+9 &amp; 1 &amp; -3\\
+-5 &amp; 7 &amp; -4
+\end{pmatrix}.
+\]</span></p>
+<p>Akhirnya,</p>
+<p><span class="math display">\[
+A^{-1}=
+\begin{pmatrix}
+-\frac{1}{17} &amp; -\frac{2}{17} &amp; \frac{6}{17}\\
+\frac{9}{17} &amp; \frac{1}{17} &amp; -\frac{3}{17}\\
+-\frac{5}{17} &amp; \frac{7}{17} &amp; -\frac{4}{17}
+\end{pmatrix}.
+\]</span></p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Cek cepat (opsional)">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Cek cepat (opsional)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Kalikan <span class="math inline">\(A\cdot A^{-1}\)</span>.<br>
+Jika benar, hasilnya adalah matriks identitas <span class="math inline">\(I\)</span>.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="metode-penghapusan" class="level4">
+<h4 class="anchored" data-anchor-id="metode-penghapusan">Metode Penghapusan</h4>
+<p>Selain menggunakan metode adjoin, invers matriks juga dapat ditentukan dengan metode penghapusan melalui operasi baris dasar (OBE).</p>
+<p>Metode ini didasarkan pada prinsip bahwa jika suatu matriks <span class="math inline">\(A\)</span> dapat diubah menjadi matriks identitas <span class="math inline">\(I\)</span> melalui serangkaian operasi baris dasar, maka operasi yang sama yang diterapkan pada matriks identitas akan menghasilkan matriks invers <span class="math inline">\(A^{-1}\)</span>.</p>
+<p>Secara praktis, metode ini dilakukan dengan membentuk matriks gabungan</p>
+<p><span class="math display">\[
+[A \mid I],
+\]</span></p>
+<p>kemudian melakukan operasi baris dasar hingga bagian kiri berubah menjadi <span class="math inline">\(I\)</span>.<br>
+Pada saat itu, bagian kanan akan menjadi <span class="math inline">\(A^{-1}\)</span>.</p>
+<p>Metode ini lebih sistematis dan sering digunakan dalam perhitungan numerik maupun komputasi.</p>
+<div id="def-invers-obe" class="theorem definition" title="Definisi 5.5.4 (Matriks Invers Ukuran $n \times n$ dengan Metode Penghapusan)">
+<p><span class="theorem-title"><strong>Definition 1.13</strong></span> <strong>Metode penghapusan</strong></p>
+<p>Misalkan <span class="math inline">\(A\)</span> adalah matriks taksingular berordo <span class="math inline">\(n \times n\)</span> yang didefinisikan sebagai</p>
+<p><span class="math display">\[
+A=
+\begin{pmatrix}
+a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\
+a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2n} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+a_{n1} &amp; a_{n2} &amp; \cdots &amp; a_{nn}
+\end{pmatrix}.
+\]</span></p>
+<p>Jika melalui serangkaian operasi baris dasar diperoleh</p>
+<p><span class="math display">\[
+E_p E_{p-1} \cdots E_2 E_1 A = I,
+\]</span></p>
+<p>maka berlaku</p>
+<p><span class="math display">\[
+PA = I,
+\]</span></p>
+<p>dengan</p>
+<p><span class="math display">\[
+P = E_p E_{p-1} \cdots E_2 E_1.
+\]</span></p>
+<p>Karena <span class="math inline">\(PA = I\)</span>, maka</p>
+<p><span class="math display">\[
+P = A^{-1}.
+\]</span></p>
+<p>Dengan demikian, invers matriks <span class="math inline">\(A\)</span> dapat diperoleh dengan menerapkan operasi baris dasar pada matriks identitas yang digabungkan dengan <span class="math inline">\(A\)</span>.</p>
+</div>
+<div id="ex-invers-3x3-obe-chain" class="theorem example" title="Contoh (Metode penghapusan dengan OBD berantai)">
+<p>Tentukan invers matriks berikut menggunakan metode penghapusan.</p>
+<p><span class="math display">\[
+A=
+\begin{pmatrix}
+1 &amp; 2 &amp; 0\\
+3 &amp; 2 &amp; 3\\
+4 &amp; 1 &amp; 1
+\end{pmatrix}.
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Kita bentuk matriks diperbesar <span class="math inline">\((A \mid I)\)</span>, lalu lakukan OBD sampai sisi kiri menjadi <span class="math inline">\(I\)</span>.</p>
+</div>
+</div>
+<p><span class="math display">\[
+\begin{aligned}
+(A\mid I)
+&amp;=
+\begin{pmatrix}
+1 &amp; 2 &amp; 0 &amp; 1 &amp; 0 &amp; 0\\
+3 &amp; 2 &amp; 3 &amp; 0 &amp; 1 &amp; 0\\
+4 &amp; 1 &amp; 1 &amp; 0 &amp; 0 &amp; 1
+\end{pmatrix}
+\\[6pt]
+&amp;\overset{E_{21}(-3)}{\longrightarrow}
+\begin{pmatrix}
+1 &amp; 2 &amp; 0 &amp; 1 &amp; 0 &amp; 0\\
+0 &amp; -4 &amp; 3 &amp; -3 &amp; 1 &amp; 0\\
+4 &amp; 1 &amp; 1 &amp; 0 &amp; 0 &amp; 1
+\end{pmatrix}
+\\[6pt]
+&amp;\overset{E_{31}(-4)}{\longrightarrow}
+\begin{pmatrix}
+1 &amp; 2 &amp; 0 &amp; 1 &amp; 0 &amp; 0\\
+0 &amp; -4 &amp; 3 &amp; -3 &amp; 1 &amp; 0\\
+0 &amp; -7 &amp; 1 &amp; -4 &amp; 0 &amp; 1
+\end{pmatrix}
+\\[6pt]
+&amp;\overset{E_{32}\!\left(-\tfrac{7}{4}\right)}{\longrightarrow}
+\begin{pmatrix}
+1 &amp; 2 &amp; 0 &amp; 1 &amp; 0 &amp; 0\\
+0 &amp; -4 &amp; 3 &amp; -3 &amp; 1 &amp; 0\\
+0 &amp; 0 &amp; -\tfrac{17}{4} &amp; \tfrac{5}{4} &amp; -\tfrac{7}{4} &amp; 1
+\end{pmatrix}
+\\[6pt]
+&amp;\overset{E_{23}\!\left(\tfrac{12}{17}\right)}{\longrightarrow}
+\begin{pmatrix}
+1 &amp; 2 &amp; 0 &amp; 1 &amp; 0 &amp; 0\\
+0 &amp; -4 &amp; 0 &amp; -\tfrac{36}{17} &amp; -\tfrac{4}{17} &amp; \tfrac{12}{17}\\
+0 &amp; 0 &amp; -\tfrac{17}{4} &amp; \tfrac{5}{4} &amp; -\tfrac{7}{4} &amp; 1
+\end{pmatrix}
+\\[6pt]
+&amp;\overset{E_{33}\!\left(-\tfrac{4}{17}\right)}{\longrightarrow}
+\begin{pmatrix}
+1 &amp; 2 &amp; 0 &amp; 1 &amp; 0 &amp; 0\\
+0 &amp; -4 &amp; 0 &amp; -\tfrac{36}{17} &amp; -\tfrac{4}{17} &amp; \tfrac{12}{17}\\
+0 &amp; 0 &amp; 1 &amp; -\tfrac{5}{17} &amp; \tfrac{7}{17} &amp; -\tfrac{4}{17}
+\end{pmatrix}
+\\[6pt]
+&amp;\overset{E_{22}\!\left(-\tfrac{1}{4}\right)}{\longrightarrow}
+\begin{pmatrix}
+1 &amp; 2 &amp; 0 &amp; 1 &amp; 0 &amp; 0\\
+0 &amp; 1 &amp; 0 &amp; \tfrac{9}{17} &amp; \tfrac{1}{17} &amp; -\tfrac{3}{17}\\
+0 &amp; 0 &amp; 1 &amp; -\tfrac{5}{17} &amp; \tfrac{7}{17} &amp; -\tfrac{4}{17}
+\end{pmatrix}
+\\[6pt]
+&amp;\overset{E_{12}(-2)}{\longrightarrow}
+\begin{pmatrix}
+1 &amp; 0 &amp; 0 &amp; -\tfrac{1}{17} &amp; -\tfrac{2}{17} &amp; \tfrac{6}{17}\\
+0 &amp; 1 &amp; 0 &amp; \tfrac{9}{17} &amp; \tfrac{1}{17} &amp; -\tfrac{3}{17}\\
+0 &amp; 0 &amp; 1 &amp; -\tfrac{5}{17} &amp; \tfrac{7}{17} &amp; -\tfrac{4}{17}
+\end{pmatrix}
+=
+(I\mid A^{-1}).
+\end{aligned}
+\]</span></p>
+<p>Sehingga</p>
+<p><span class="math display">\[
+A^{-1}=
+\begin{pmatrix}
+-\tfrac{1}{17} &amp; -\tfrac{2}{17} &amp; \tfrac{6}{17}\\
+\tfrac{9}{17} &amp; \tfrac{1}{17} &amp; -\tfrac{3}{17}\\
+-\tfrac{5}{17} &amp; \tfrac{7}{17} &amp; -\tfrac{4}{17}
+\end{pmatrix}.
+\]</span></p>
+</div>
 </section>
 </section>
 </section>
 <section id="rangkuman" class="level2" data-number="1.4">
 <h2 data-number="1.4" class="anchored" data-anchor-id="rangkuman"><span class="header-section-number">1.4</span> Rangkuman</h2>
+<p>Matriks merupakan kumpulan bilangan yang terdiri dari baris dan kolom. Operasi pada matriks yaitu penjumlahan, pengurangan, perkalian dengan skalar dan perkalian titik. Operasi baris dasar terdiri dari tiga operasi yaitu Eij, Eij(k), dan Ei(k). Determinan merupakan nilai skalar dari suatu matriks. Nilai determinan dapat ditentukan dengan cara sarrus dan dengan metode minor kofaktor. Matriks invers dapat ditentukan dengan metode matriks adjoint. Matriks invers dapat dicari jika matriks tersebut merupakan matriks taksingular sedangkan matriks yang tidak punya invers disebut matriks singular (nilai determinannya nol).</p>
 </section>
 <section id="latihan" class="level2" data-number="1.5">
 <h2 data-number="1.5" class="anchored" data-anchor-id="latihan"><span class="header-section-number">1.5</span> Latihan</h2>
