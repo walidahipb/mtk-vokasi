@@ -71,7 +71,37 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light">
@@ -179,13 +209,17 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="99">
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
   <li><a href="#tujuan-instruksional-khusus" id="toc-tujuan-instruksional-khusus" class="nav-link active" data-scroll-target="#tujuan-instruksional-khusus"><span class="header-section-number">1.1</span> Tujuan Instruksional Khusus</a></li>
   <li><a href="#tujuan-responsi" id="toc-tujuan-responsi" class="nav-link" data-scroll-target="#tujuan-responsi"><span class="header-section-number">1.2</span> Tujuan Responsi</a></li>
-  <li><a href="#pendahuluan" id="toc-pendahuluan" class="nav-link" data-scroll-target="#pendahuluan"><span class="header-section-number">1.3</span> Pendahuluan</a></li>
+  <li><a href="#pendahuluan" id="toc-pendahuluan" class="nav-link" data-scroll-target="#pendahuluan"><span class="header-section-number">1.3</span> Pendahuluan</a>
+  <ul class="collapse">
+  <li><a href="#matriks-dan-bentuknya" id="toc-matriks-dan-bentuknya" class="nav-link" data-scroll-target="#matriks-dan-bentuknya"><span class="header-section-number">1.3.1</span> Matriks dan Bentuknya</a></li>
+  <li><a href="#operasi-matriks" id="toc-operasi-matriks" class="nav-link" data-scroll-target="#operasi-matriks"><span class="header-section-number">1.3.2</span> Operasi Matriks</a></li>
+  </ul></li>
   <li><a href="#rangkuman" id="toc-rangkuman" class="nav-link" data-scroll-target="#rangkuman"><span class="header-section-number">1.4</span> Rangkuman</a></li>
   <li><a href="#latihan" id="toc-latihan" class="nav-link" data-scroll-target="#latihan"><span class="header-section-number">1.5</span> Latihan</a></li>
   </ul>
@@ -215,14 +249,357 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="tujuan-instruksional-khusus" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="tujuan-instruksional-khusus"><span class="header-section-number">1.1</span> Tujuan Instruksional Khusus</h2>
-<p>Tuliskan tujuan pembelajaran di sini.</p>
+<p>Mahasiswa dapat menjelaskan pengertian matriks, operasi matriks, serta menyelesaikan perhitungan yang melibatkan operasi matriks.</p>
 </section>
 <section id="tujuan-responsi" class="level2" data-number="1.2">
 <h2 data-number="1.2" class="anchored" data-anchor-id="tujuan-responsi"><span class="header-section-number">1.2</span> Tujuan Responsi</h2>
-<p>Tuliskan materi matriks di sini.</p>
+<ol type="1">
+<li>Mahasiswa dapat menuliskan matriks dengan definisi matriks.</li>
+<li>Mahasiswa dapat menghitung operasi pada matriks.</li>
+<li>Mahasiswa dapat melakukan operasi baris dasar pada matriks.</li>
+<li>Mahasiswa dapat mencari nilai determinan dari suatu matriks.</li>
+<li>Mahasiswa dapat menentukan putaran dari suatu matriks.</li>
+<li>Mahasiswa dapat menentukan invers dari suatu matriks</li>
+</ol>
 </section>
 <section id="pendahuluan" class="level2" data-number="1.3">
 <h2 data-number="1.3" class="anchored" data-anchor-id="pendahuluan"><span class="header-section-number">1.3</span> Pendahuluan</h2>
+<p>Matriks merupakan suatu cara untuk mengatur bilangan-bilangan. Matriks banyak digunakan untuk komputer grafis, simulasi, dan pemrosesan informasi secara umum. Resolusi layar pada monitor komputer menggunakan matriks.</p>
+<section id="matriks-dan-bentuknya" class="level3" data-number="1.3.1">
+<h3 data-number="1.3.1" class="anchored" data-anchor-id="matriks-dan-bentuknya"><span class="header-section-number">1.3.1</span> Matriks dan Bentuknya</h3>
+<p><strong>Matriks</strong></p>
+<div id="def-matriks" class="theorem definition" title="Definisi">
+<p><span class="theorem-title"><strong>Definition 1.1</strong></span> Matriks adalah susunan bilangan berbentuk persegi panjang yang disusun dalam baris dan kolom.</p>
+</div>
+<ul>
+<li>Ukuran atau ordo dari suatu matriks ditentukan oleh banyaknya baris dan kolom yang membentuknya.</li>
+<li>Nama matriks ditulis dengan huruf kapital: A,B,C,…. .</li>
+<li>Anggota dari matriks A pada baris ke <em>i</em> dan kolom ke <em>j</em> dinotasikan a<sub>ij</sub> . Matriks A dengan ordo mxn ditulis: A<sub>mxn</sub>.</li>
+</ul>
+<p><span class="math display">\[
+A_{mxn} =
+\begin{pmatrix}
+a_{11} &amp; a_{12} &amp; ... &amp; a_{1n} \\
+a_{21} &amp; a_{22} &amp; ... &amp; a_{2n} \\
+... &amp; ... &amp; ... &amp; ... \\
+a_{m1} &amp; a_{m2} &amp; ... &amp; a_{mn}
+\end{pmatrix}
+\]</span></p>
+<div id="exm-1" class="theorem example" title="Contoh">
+<p><span class="theorem-title"><strong>Example 1.1</strong></span> &nbsp;</p>
+<ol type="1">
+<li>Matriks A berordo 2x3</li>
+</ol>
+<p><span class="math display">\[
+A =
+\begin{pmatrix}
+a_{11} &amp; a_{12} &amp; a_{13} \\
+a_{21} &amp; a_{22} &amp; a_{23}
+\end{pmatrix}
+\]</span> 2. Misalkan didefinisikan:</p>
+<p><span class="math display">\[
+a_{ij} = i + j
+\]</span> maka diperoleh matriks A sebagai berikut:</p>
+<p><span class="math display">\[
+A_{23}=\begin{pmatrix}
+1+1 &amp; 1+2 &amp; 1+3 \\
+2+1 &amp; 2+2 &amp; 2+3
+\end{pmatrix}
+=
+\begin{pmatrix}
+2 &amp; 3 &amp; 4 \\ 3 &amp; 4 &amp; 5 \end{pmatrix}
+\]</span></p>
+</div>
+<p><strong>Anak Matriks</strong></p>
+<div id="thm-invers" class="theorem" title="Teorema">
+<p><span class="theorem-title"><strong>Theorem 1.1</strong></span> Anak matriks dari matriks A adalah suatu matriks baru yang diperoleh dengan menghilangkan beberapa baris atau kolom pada matriks A.</p>
+</div>
+<div id="exm-1" class="theorem example" title="Contoh">
+<p><span class="theorem-title"><strong>Example 1.2</strong></span> Misal</p>
+<p><span class="math display">\[
+A_{23}= \begin{pmatrix} 2 &amp; 3 &amp; 4 \\ 3 &amp; 4 &amp; 5 \end{pmatrix}
+\]</span></p>
+<p>Beberapa anak matriks A dapat diperoleh dengan cara berikut:</p>
+<ul>
+<li><p>Diperoleh dengan menghilangkan kolom 1: <span class="math inline">\(A_1= \begin{pmatrix} 3 &amp; 4 \\ 4 &amp; 5 \end{pmatrix}\)</span></p></li>
+<li><p>Diperoleh dengan menghilangkan baris 2 dan kolom 3: <span class="math inline">\(A_{23}= \begin{pmatrix} 2 &amp; 3 \end{pmatrix}\)</span></p></li>
+</ul>
+</div>
+<p><strong>Matriks Khusus</strong></p>
+<p>Ada beberapa jenis matriks khusus sebagai berikut:</p>
+<ol type="1">
+<li><p>Matriks segi: matriks yang jumlah barisnya sama dengan jumlah kolomnya.Pada contoh berikut, maka elemen diagonal utamanya yaitu <span class="math inline">\(a_{11}, a_{22},..., a_{mn}\)</span>. <span class="math display">\[
+A_{mxn} =
+\begin{pmatrix}
+a_{11} &amp; a_{12} &amp; ... &amp; a_{1n} \\
+a_{21} &amp; a_{22} &amp; ... &amp; a_{2n} \\
+... &amp; ... &amp; ... &amp; ... \\
+a_{m1} &amp; a_{m2} &amp; ... &amp; a_{mn}
+\end{pmatrix}
+\]</span></p></li>
+<li><p>Matriks segitiga atas: matriks yang semua elemen di bawah diagonal utamanya bernilai nol.</p></li>
+</ol>
+<p><span class="math display">\[
+A_{mxn} =
+\begin{pmatrix}
+a_{11} &amp; a_{12} &amp; ... &amp; a_{1n} \\
+0 &amp; a_{22} &amp; ... &amp; a_{2n} \\
+... &amp; ... &amp; ... &amp; ... \\
+0 &amp; 0 &amp; ... &amp; a_{mn}
+\end{pmatrix}
+\]</span> 3. Matriks segitiga bawah: matriks yang semua elemen di atas diagonal utamanya bernilai nol.</p>
+<p><span class="math display">\[
+A_{mxn} =
+\begin{pmatrix}
+a_{11} &amp; 0 &amp; ... &amp; 0 \\
+a_{21} &amp; a_{22} &amp; ... &amp; 0 \\
+... &amp; ... &amp; ... &amp; ... \\
+a_{m1} &amp; a_{m2} &amp; ... &amp; a_{mn}
+\end{pmatrix}
+\]</span> 4. Matriks diagonal: matriks yang semua elemen selain diagonal utamanya bernilai nol.</p>
+<p><span class="math display">\[
+A_{mxn} =
+\begin{pmatrix}
+a_{11} &amp; 0 &amp; ... &amp; 0 \\
+0 &amp; a_{22} &amp; ... &amp; 0 \\
+... &amp; ... &amp; ... &amp; ... \\
+0 &amp; 0 &amp; ... &amp; a_{mn}
+\end{pmatrix}
+\]</span> 5. Matriks identitas: matriks segi yang semua elemen diagonal utamanya bernilai satu dan selainnya bernilai nol.</p>
+<p><span class="math display">\[
+A_{mxn} =
+\begin{pmatrix}
+1 &amp; 0 &amp; ... &amp; 0 \\
+0 &amp; 1 &amp; ... &amp; 0 \\
+... &amp; ... &amp; ... &amp; ... \\
+0 &amp; 0 &amp; ... &amp; 1
+\end{pmatrix}
+\]</span></p>
+<ol start="6" type="1">
+<li>Matriks nol: matriks yang semua elemennya bernilai nol.</li>
+</ol>
+<p><span class="math display">\[
+A_{mxn} =
+\begin{pmatrix}
+0 &amp; 0 &amp; ... &amp; 0 \\
+0 &amp; 0 &amp; ... &amp; 0 \\
+... &amp; ... &amp; ... &amp; ... \\
+0 &amp; 0 &amp; ... &amp; 0
+\end{pmatrix}
+\]</span></p>
+</section>
+<section id="operasi-matriks" class="level3" data-number="1.3.2">
+<h3 data-number="1.3.2" class="anchored" data-anchor-id="operasi-matriks"><span class="header-section-number">1.3.2</span> Operasi Matriks</h3>
+<p><strong>Penjumlahan atau pengurangan matriks</strong></p>
+<div id="def-matriks" class="theorem definition" title="Definisi">
+<p><span class="theorem-title"><strong>Definition 1.2</strong></span> <strong>Penjumlahan atau pengurangan matriks</strong> Dua matriks dapat dijumlahkan atau dikurangkan jika dan hanya jika kedua matriks tersebut memiliki ukuran yang sama. Artinya jika <span class="math inline">\(A=(a_{ij})_{mxn}\)</span> dan <span class="math inline">\(B=(b_{ij})_{mxn}\)</span> maka</p>
+<p><span class="math display">\[
+A \pm B = \begin{pmatrix} a_{ij} \pm b_{ij} \end{pmatrix}_{m \times n}
+\]</span></p>
+</div>
+<div id="exm-1" class="theorem example" title="Contoh">
+<p><span class="theorem-title"><strong>Example 1.3</strong></span> Misalkan <span class="math inline">\(A=\begin{pmatrix}1&amp;2\\3&amp;4 \end{pmatrix}\)</span> dan <span class="math inline">\(B=\begin{pmatrix}5&amp;6\\7&amp;8 \end{pmatrix}\)</span>, maka diperoleh <span class="math display">\[
+A+B = \begin{pmatrix}1&amp;2\\3&amp;4 \end{pmatrix} + \begin{pmatrix}5&amp;6\\7&amp;8 \end{pmatrix}=\begin{pmatrix}6&amp;8\\10&amp;12 \end{pmatrix}.
+\]</span></p>
+</div>
+<p><strong>Perkalian matriks dengan skalar</strong></p>
+<div id="def-matriks" class="theorem definition" title="Definisi">
+<p><span class="theorem-title"><strong>Definition 1.3</strong></span> <strong>Perkalian matriks dengan skalar</strong> Suatu matriks dapat dikalikan dengan skalar.Jika $A=(a_{ij})_{m n} $ dan k suatu skalar maka</p>
+<p><span class="math display">\[
+kA=(ka_{ij})_{m \times n}
+\]</span></p>
+</div>
+<div id="exm-1" class="theorem example" title="Contoh">
+<p><span class="theorem-title"><strong>Example 1.4</strong></span> Misalkan <span class="math inline">\(A=\begin{pmatrix}1&amp;2 \\ 3&amp;4 \end{pmatrix}\)</span> dan k = 3 maka diperoleh <span class="math display">\[
+3A=3\begin{pmatrix}1&amp;2 \\ 3&amp;4 \end{pmatrix}=\begin{pmatrix}3 \times 1&amp; 3 \times2 \\ 3\times3&amp;3\times4 \end{pmatrix}=\begin{pmatrix}3&amp;6 \\ 9&amp;12 \end{pmatrix}
+\]</span></p>
+</div>
+<div class="theorem proposition">
+<p><strong>Sifat-sifat Penjumlahan Matriks dan Perkalian dengan Skalar</strong></p>
+<p>Jika <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, dan <span class="math inline">\(C\)</span> adalah matriks-matriks berukuran sama, serta <span class="math inline">\(k_1\)</span> dan <span class="math inline">\(k_2\)</span> adalah skalar, maka berlaku:</p>
+<ol type="1">
+<li><span class="math inline">\((A+B)+C = A+(B+C)\)</span><br>
+</li>
+<li><span class="math inline">\(A+(-A)=O\)</span>, dengan <span class="math inline">\(O\)</span> matriks nol<br>
+</li>
+<li><span class="math inline">\(A+B = B + A\)</span><br>
+</li>
+<li><span class="math inline">\(k_1(A+B)=k_1A+k_1B\)</span><br>
+</li>
+<li><span class="math inline">\((k_1+k_2)A=k_1A+k_2A\)</span><br>
+</li>
+<li><span class="math inline">\((k_1k_2)A=k_1(k_2A)\)</span><br>
+</li>
+<li><span class="math inline">\(OA=O\)</span></li>
+</ol>
+</div>
+<div id="exm-1" class="theorem example" title="Contoh">
+<p><span class="theorem-title"><strong>Example 1.5</strong></span> Misalkan <span class="math inline">\(A=\begin{pmatrix}1&amp;2\end{pmatrix},B=\begin{pmatrix}3&amp;4\end{pmatrix}\)</span> dan <span class="math inline">\(C=\begin{pmatrix}5\\6\end{pmatrix}\)</span>. Tentukan nilai dari (jika ada):</p>
+<ol type="a">
+<li><span class="math inline">\(A-B\)</span></li>
+<li><span class="math inline">\(2A-3B\)</span></li>
+<li><span class="math inline">\(4C\)</span></li>
+<li><span class="math inline">\(A+C\)</span></li>
+</ol>
+</div>
+<p>Jawab:</p>
+<ol type="a">
+<li><span class="math inline">\(A-B=\begin{pmatrix}1&amp;2\end{pmatrix}-\begin{pmatrix}3&amp;4\end{pmatrix}=\begin{pmatrix}1-3&amp;2-4\end{pmatrix}=\begin{pmatrix}-2&amp;-2\end{pmatrix}\)</span></li>
+<li><span class="math inline">\(2A-3B=2\begin{pmatrix}1&amp;2\end{pmatrix}-3\begin{pmatrix}3&amp;4\end{pmatrix}=\begin{pmatrix}2&amp;4\end{pmatrix}-\begin{pmatrix}9&amp;12\end{pmatrix}=\begin{pmatrix}-7&amp;-8\end{pmatrix}\)</span></li>
+<li><span class="math inline">\(4C=4\begin{pmatrix}5\\6\end{pmatrix}=\begin{pmatrix}20\\24\end{pmatrix}\)</span></li>
+<li><span class="math inline">\(A+C=\begin{pmatrix}1&amp;2\end{pmatrix}+\begin{pmatrix}5\\6\end{pmatrix}\)</span> tidak terdefinisi, karena ordo matriks A tidak sama dengan ordo matriks C.</li>
+</ol>
+<p><strong>Perkalian Matriks</strong></p>
+<div id="def-matriks" class="theorem definition" title="Definisi">
+<p><span class="theorem-title"><strong>Definition 1.4</strong></span> <strong>Perkalian matriks</strong> Dua matriks A dan B dapat dikalikan (AB) jika dan hanya jika matriks A memiliki banyaknya kolom yang sama dengan banyaknya baris pada matriks B. Artinya jika <span class="math inline">\(A=(a_{ij})_{m \times n}\)</span> dan <span class="math inline">\(B= (b_{ij})_{n \times p}\)</span> maka</p>
+<p><span class="math display">\[
+AB=(c_{ij})_{m \times p} \text{ dengan } c_{ij}=a_{i1}b_{1j}+a_{i2}b_{2j}+...+a_{im}b_{nj}
+\]</span></p>
+</div>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Langkah 1 — pilih baris dari A</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Langkah 2 — pilih kolom dari B</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">Langkah 3 — hasilkan c_{11}</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p><span class="math display">\[
+A=
+\begin{pmatrix}
+\boxed{a_{11}} &amp; \boxed{a_{12}} &amp; \cdots &amp; \boxed{a_{1n}} \\
+a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2n} \\
+\vdots &amp; \vdots &amp;        &amp; \vdots \\
+a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}
+\end{pmatrix},
+\quad
+B=
+\begin{pmatrix}
+b_{11} &amp; b_{12} &amp; \cdots &amp; b_{1p} \\
+b_{21} &amp; b_{22} &amp; \cdots &amp; b_{2p} \\
+\vdots &amp; \vdots &amp;        &amp; \vdots \\
+b_{n1} &amp; b_{n2} &amp; \cdots &amp; b_{np}
+\end{pmatrix}
+\]</span></p>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p><span class="math display">\[
+A=
+\begin{pmatrix}
+a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\
+a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2n} \\
+\vdots &amp; \vdots &amp;        &amp; \vdots \\
+a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}
+\end{pmatrix},
+\quad
+B=
+\begin{pmatrix}
+\boxed{b_{11}} &amp; b_{12} &amp; \cdots &amp; b_{1p} \\
+\boxed{b_{21}} &amp; b_{22} &amp; \cdots &amp; b_{2p} \\
+\vdots &amp; \vdots &amp;        &amp; \vdots \\
+\boxed{b_{n1}} &amp; b_{n2} &amp; \cdots &amp; b_{np}
+\end{pmatrix}
+\]</span></p>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<p><span class="math display">\[
+c_{11}=a_{11}b_{11}+a_{12}b_{21}+\cdots+a_{1n}b_{n1}
+\]</span></p>
+<p><span class="math display">\[
+C=
+\begin{pmatrix}
+\boxed{c_{11}} &amp; c_{12} &amp; \cdots &amp; c_{1p} \\
+c_{21} &amp; c_{22} &amp; \cdots &amp; c_{2p} \\
+\vdots &amp; \vdots &amp;        &amp; \vdots \\
+c_{m1} &amp; c_{m2} &amp; \cdots &amp; c_{mp}
+\end{pmatrix}
+\]</span></p>
+</div>
+</div>
+</div>
+<div class="example">
+<p>Misalkan</p>
+<p><span class="math display">\[
+A=
+\begin{pmatrix}
+1 &amp; 3 &amp; 5 \\
+2 &amp; 4 &amp; 6
+\end{pmatrix}
+\quad
+\text{dan}
+\quad
+B=
+\begin{pmatrix}
+2 &amp; 0 \\
+3 &amp; 1 \\
+4 &amp; 5
+\end{pmatrix}
+\]</span></p>
+<p>Tentukan hasil perkalian ( AB ).</p>
+<hr>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">Langkah 1 — Pilih baris pertama A</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">Langkah 2 — Pilih kolom pertama B</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false" href="">Langkah 3 — Hitung ( c_{11} )</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-4" role="tab" aria-controls="tabset-2-4" aria-selected="false" href="">Langkah 4 — Hasil akhir</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<p><span class="math display">\[
+A=
+\begin{pmatrix}
+\color{#1f77b4}{1} &amp; \color{#1f77b4}{3} &amp; \color{#1f77b4}{5} \\
+2 &amp; 4 &amp; 6
+\end{pmatrix}
+\]</span></p>
+<p>Baris pertama: [ ]</p>
+<hr>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<p><span class="math display">\[
+B=
+\begin{pmatrix}
+\color{#2ca02c}{2} &amp; 0 \\
+\color{#2ca02c}{3} &amp; 1 \\
+\color{#2ca02c}{4} &amp; 5
+\end{pmatrix}
+\]</span></p>
+<p>Kolom pertama: [ ]</p>
+<hr>
+</div>
+<div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
+<p><span class="math display">\[
+\color{#d62728}{
+c_{11}
+= (1\times2) + (3\times3) + (5\times4)
+}
+\]</span></p>
+<p><span class="math display">\[
+\color{#d62728}{
+= 2 + 9 + 20 = 31
+}
+\]</span></p>
+<hr>
+</div>
+<div id="tabset-2-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-4-tab">
+<p><span class="math display">\[
+AB=
+\begin{pmatrix}
+\color{#d62728}{31} &amp; 28 \\
+40 &amp; 34
+\end{pmatrix}
+\]</span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="theorem proposition">
+<p><strong>Sifat-sifat Perkalian Matriks</strong></p>
+<p>Jika <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, dan <span class="math inline">\(C\)</span> matriks berukuran sesuai dan <span class="math inline">\(k\)</span> skalar, maka:</p>
+<ol type="1">
+<li><span class="math inline">\((AB)C = A(BC)\)</span></li>
+<li><span class="math inline">\(A(B + C) = AB + AC\)</span></li>
+<li><span class="math inline">\((B + C)A = BA + CA\)</span></li>
+<li><span class="math inline">\(k(AB) = (kA)B = A(kB)\)</span></li>
+</ol>
+<p><strong>Catatan:</strong> Secara umum, <span class="math inline">\(AB \ne BA\)</span>.</p>
+</div>
+<section id="matriks-putarantranspose" class="level4">
+<h4 class="anchored" data-anchor-id="matriks-putarantranspose">Matriks Putaran/Transpose</h4>
+</section>
+</section>
 </section>
 <section id="rangkuman" class="level2" data-number="1.4">
 <h2 data-number="1.4" class="anchored" data-anchor-id="rangkuman"><span class="header-section-number">1.4</span> Rangkuman</h2>
