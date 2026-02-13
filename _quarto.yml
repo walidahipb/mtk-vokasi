@@ -18,8 +18,6 @@ book:
         - 05-limit.qmd
         - 06-turunan.qmd
         - 07-integral.qmd
-        - intro.qmd
-        - summary.qmd
     - references.qmd
 
 bibliography: references.bib

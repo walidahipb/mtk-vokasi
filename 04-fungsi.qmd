@@ -1,10 +1,14 @@
 # Fungsi
 
-## Tujuan Pembelajaran
+## Tujuan Instruksional Khusus
 Tuliskan tujuan pembelajaran di sini.
 
-## Materi
+## Tujuan Responsi
 Tuliskan materi matriks di sini.
+
+## Pendahuluan
+
+## Rangkuman
 
 ## Latihan
 1. ...

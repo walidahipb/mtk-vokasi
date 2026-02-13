@@ -24,18 +24,40 @@
     "href": "01-matriks.html",
     "title": "1  Matriks",
     "section": "",
-    "text": "1.1 Tujuan Pembelajaran\nTuliskan tujuan pembelajaran di sini.",
+    "text": "1.1 Tujuan Instruksional Khusus\nTuliskan tujuan pembelajaran di sini.",
     "crumbs": [
       "Materi",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Matriks</span>"
     ]
   },
   {
-    "objectID": "01-matriks.html#materi",
-    "href": "01-matriks.html#materi",
+    "objectID": "01-matriks.html#tujuan-responsi",
+    "href": "01-matriks.html#tujuan-responsi",
     "title": "1  Matriks",
-    "section": "1.2 Materi",
-    "text": "1.2 Materi\nTuliskan materi matriks di sini.",
+    "section": "1.2 Tujuan Responsi",
+    "text": "1.2 Tujuan Responsi\nTuliskan materi matriks di sini.",
+    "crumbs": [
+      "Materi",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Matriks</span>"
+    ]
+  },
+  {
+    "objectID": "01-matriks.html#pendahuluan",
+    "href": "01-matriks.html#pendahuluan",
+    "title": "1  Matriks",
+    "section": "1.3 Pendahuluan",
+    "text": "1.3 Pendahuluan",
+    "crumbs": [
+      "Materi",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Matriks</span>"
+    ]
+  },
+  {
+    "objectID": "01-matriks.html#rangkuman",
+    "href": "01-matriks.html#rangkuman",
+    "title": "1  Matriks",
+    "section": "1.4 Rangkuman",
+    "text": "1.4 Rangkuman",
     "crumbs": [
       "Materi",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Matriks</span>"
@@ -45,62 +67,52 @@
     "objectID": "01-matriks.html#latihan",
     "href": "01-matriks.html#latihan",
     "title": "1  Matriks",
-    "section": "1.3 Latihan",
-    "text": "1.3 Latihan\n\n…\n…",
+    "section": "1.5 Latihan",
+    "text": "1.5 Latihan\n\n…\n…",
     "crumbs": [
       "Materi",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Matriks</span>"
     ]
   },
   {
-    "objectID": "intro.html",
-    "href": "intro.html",
-    "title": "3  Introduction",
-    "section": "",
-    "text": "This is a book created from markdown and executable code.\nSee Knuth (1984) for additional discussion of literate programming.\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
-    "crumbs": [
-      "Materi",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Introduction</span>"
-    ]
-  },
-  {
-    "objectID": "summary.html",
-    "href": "summary.html",
-    "title": "4  Summary",
-    "section": "",
-    "text": "In summary, this book has no content whatsoever.",
-    "crumbs": [
-      "Materi",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Summary</span>"
-    ]
-  },
-  {
-    "objectID": "references.html",
-    "href": "references.html",
-    "title": "References",
-    "section": "",
-    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
-    "crumbs": [
-      "References"
-    ]
-  },
-  {
     "objectID": "02-spl.html",
     "href": "02-spl.html",
-    "title": "2  Matriks",
+    "title": "2  Sistem Persamaan Linear",
     "section": "",
-    "text": "2.1 Tujuan Pembelajaran\nTuliskan tujuan pembelajaran di sini.",
+    "text": "2.1 Tujuan Instruksional Khusus\nTuliskan tujuan pembelajaran di sini.",
     "crumbs": [
       "Materi",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Sistem Persamaan Linear</span>"
     ]
   },
   {
-    "objectID": "02-spl.html#materi",
-    "href": "02-spl.html#materi",
-    "title": "2  Matriks",
-    "section": "2.2 Materi",
-    "text": "2.2 Materi\nTuliskan materi matriks di sini.",
+    "objectID": "02-spl.html#tujuan-responsi",
+    "href": "02-spl.html#tujuan-responsi",
+    "title": "2  Sistem Persamaan Linear",
+    "section": "2.2 Tujuan Responsi",
+    "text": "2.2 Tujuan Responsi\nTuliskan materi matriks di sini.",
+    "crumbs": [
+      "Materi",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Sistem Persamaan Linear</span>"
+    ]
+  },
+  {
+    "objectID": "02-spl.html#pendahuluan",
+    "href": "02-spl.html#pendahuluan",
+    "title": "2  Sistem Persamaan Linear",
+    "section": "2.3 Pendahuluan",
+    "text": "2.3 Pendahuluan",
+    "crumbs": [
+      "Materi",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Sistem Persamaan Linear</span>"
+    ]
+  },
+  {
+    "objectID": "02-spl.html#rangkuman",
+    "href": "02-spl.html#rangkuman",
+    "title": "2  Sistem Persamaan Linear",
+    "section": "2.4 Rangkuman",
+    "text": "2.4 Rangkuman",
     "crumbs": [
       "Materi",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Sistem Persamaan Linear</span>"
@@ -109,9 +121,9 @@
   {
     "objectID": "02-spl.html#latihan",
     "href": "02-spl.html#latihan",
-    "title": "2  Matriks",
-    "section": "2.3 Latihan",
-    "text": "2.3 Latihan\n\n…\n…",
+    "title": "2  Sistem Persamaan Linear",
+    "section": "2.5 Latihan",
+    "text": "2.5 Latihan\n\n…\n…",
     "crumbs": [
       "Materi",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Sistem Persamaan Linear</span>"
@@ -120,20 +132,42 @@
   {
     "objectID": "03-ketaksamaan.html",
     "href": "03-ketaksamaan.html",
-    "title": "3  Matriks",
+    "title": "3  Ketaksamaan",
     "section": "",
-    "text": "3.1 Tujuan Pembelajaran\nTuliskan tujuan pembelajaran di sini.",
+    "text": "3.1 Tujuan Instruksional Khusus\nTuliskan tujuan pembelajaran di sini.",
     "crumbs": [
       "Materi",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Ketaksamaan</span>"
     ]
   },
   {
-    "objectID": "03-ketaksamaan.html#materi",
-    "href": "03-ketaksamaan.html#materi",
-    "title": "3  Matriks",
-    "section": "3.2 Materi",
-    "text": "3.2 Materi\nTuliskan materi matriks di sini.",
+    "objectID": "03-ketaksamaan.html#tujuan-responsi",
+    "href": "03-ketaksamaan.html#tujuan-responsi",
+    "title": "3  Ketaksamaan",
+    "section": "3.2 Tujuan Responsi",
+    "text": "3.2 Tujuan Responsi\nTuliskan materi matriks di sini.",
+    "crumbs": [
+      "Materi",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Ketaksamaan</span>"
+    ]
+  },
+  {
+    "objectID": "03-ketaksamaan.html#pendahuluan",
+    "href": "03-ketaksamaan.html#pendahuluan",
+    "title": "3  Ketaksamaan",
+    "section": "3.3 Pendahuluan",
+    "text": "3.3 Pendahuluan",
+    "crumbs": [
+      "Materi",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Ketaksamaan</span>"
+    ]
+  },
+  {
+    "objectID": "03-ketaksamaan.html#rangkuman",
+    "href": "03-ketaksamaan.html#rangkuman",
+    "title": "3  Ketaksamaan",
+    "section": "3.4 Rangkuman",
+    "text": "3.4 Rangkuman",
     "crumbs": [
       "Materi",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Ketaksamaan</span>"
@@ -142,9 +176,9 @@
   {
     "objectID": "03-ketaksamaan.html#latihan",
     "href": "03-ketaksamaan.html#latihan",
-    "title": "3  Matriks",
-    "section": "3.3 Latihan",
-    "text": "3.3 Latihan\n\n…\n…",
+    "title": "3  Ketaksamaan",
+    "section": "3.5 Latihan",
+    "text": "3.5 Latihan\n\n…\n…",
     "crumbs": [
       "Materi",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Ketaksamaan</span>"
@@ -155,18 +189,40 @@
     "href": "04-fungsi.html",
     "title": "4  Fungsi",
     "section": "",
-    "text": "4.1 Tujuan Pembelajaran\nTuliskan tujuan pembelajaran di sini.",
+    "text": "4.1 Tujuan Instruksional Khusus\nTuliskan tujuan pembelajaran di sini.",
     "crumbs": [
       "Materi",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fungsi</span>"
     ]
   },
   {
-    "objectID": "04-fungsi.html#materi",
-    "href": "04-fungsi.html#materi",
+    "objectID": "04-fungsi.html#tujuan-responsi",
+    "href": "04-fungsi.html#tujuan-responsi",
     "title": "4  Fungsi",
-    "section": "4.2 Materi",
-    "text": "4.2 Materi\nTuliskan materi matriks di sini.",
+    "section": "4.2 Tujuan Responsi",
+    "text": "4.2 Tujuan Responsi\nTuliskan materi matriks di sini.",
+    "crumbs": [
+      "Materi",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fungsi</span>"
+    ]
+  },
+  {
+    "objectID": "04-fungsi.html#pendahuluan",
+    "href": "04-fungsi.html#pendahuluan",
+    "title": "4  Fungsi",
+    "section": "4.3 Pendahuluan",
+    "text": "4.3 Pendahuluan",
+    "crumbs": [
+      "Materi",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fungsi</span>"
+    ]
+  },
+  {
+    "objectID": "04-fungsi.html#rangkuman",
+    "href": "04-fungsi.html#rangkuman",
+    "title": "4  Fungsi",
+    "section": "4.4 Rangkuman",
+    "text": "4.4 Rangkuman",
     "crumbs": [
       "Materi",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fungsi</span>"
@@ -176,8 +232,8 @@
     "objectID": "04-fungsi.html#latihan",
     "href": "04-fungsi.html#latihan",
     "title": "4  Fungsi",
-    "section": "4.3 Latihan",
-    "text": "4.3 Latihan\n\n…\n…",
+    "section": "4.5 Latihan",
+    "text": "4.5 Latihan\n\n…\n…",
     "crumbs": [
       "Materi",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fungsi</span>"
@@ -188,18 +244,40 @@
     "href": "05-limit.html",
     "title": "5  Limit",
     "section": "",
-    "text": "5.1 Tujuan Pembelajaran\nTuliskan tujuan pembelajaran di sini.",
+    "text": "5.1 Tujuan Instruksional Khusus\nTuliskan tujuan pembelajaran di sini.",
     "crumbs": [
       "Materi",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Limit</span>"
     ]
   },
   {
-    "objectID": "05-limit.html#materi",
-    "href": "05-limit.html#materi",
+    "objectID": "05-limit.html#tujuan-responsi",
+    "href": "05-limit.html#tujuan-responsi",
     "title": "5  Limit",
-    "section": "5.2 Materi",
-    "text": "5.2 Materi\nTuliskan materi matriks di sini.",
+    "section": "5.2 Tujuan Responsi",
+    "text": "5.2 Tujuan Responsi\nTuliskan materi matriks di sini.",
+    "crumbs": [
+      "Materi",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Limit</span>"
+    ]
+  },
+  {
+    "objectID": "05-limit.html#pendahuluan",
+    "href": "05-limit.html#pendahuluan",
+    "title": "5  Limit",
+    "section": "5.3 Pendahuluan",
+    "text": "5.3 Pendahuluan",
+    "crumbs": [
+      "Materi",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Limit</span>"
+    ]
+  },
+  {
+    "objectID": "05-limit.html#rangkuman",
+    "href": "05-limit.html#rangkuman",
+    "title": "5  Limit",
+    "section": "5.4 Rangkuman",
+    "text": "5.4 Rangkuman",
     "crumbs": [
       "Materi",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Limit</span>"
@@ -209,8 +287,8 @@
     "objectID": "05-limit.html#latihan",
     "href": "05-limit.html#latihan",
     "title": "5  Limit",
-    "section": "5.3 Latihan",
-    "text": "5.3 Latihan\n\n…\n…",
+    "section": "5.5 Latihan",
+    "text": "5.5 Latihan\n\n…\n…",
     "crumbs": [
       "Materi",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Limit</span>"
@@ -221,18 +299,40 @@
     "href": "06-turunan.html",
     "title": "6  Turunan",
     "section": "",
-    "text": "6.1 Tujuan Pembelajaran\nTuliskan tujuan pembelajaran di sini.",
+    "text": "6.1 Tujuan Instruksional Khusus\nTuliskan tujuan pembelajaran di sini.",
     "crumbs": [
       "Materi",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Turunan</span>"
     ]
   },
   {
-    "objectID": "06-turunan.html#materi",
-    "href": "06-turunan.html#materi",
+    "objectID": "06-turunan.html#tujuan-responsi",
+    "href": "06-turunan.html#tujuan-responsi",
     "title": "6  Turunan",
-    "section": "6.2 Materi",
-    "text": "6.2 Materi\nTuliskan materi matriks di sini.",
+    "section": "6.2 Tujuan Responsi",
+    "text": "6.2 Tujuan Responsi\nTuliskan materi matriks di sini.",
+    "crumbs": [
+      "Materi",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Turunan</span>"
+    ]
+  },
+  {
+    "objectID": "06-turunan.html#pendahuluan",
+    "href": "06-turunan.html#pendahuluan",
+    "title": "6  Turunan",
+    "section": "6.3 Pendahuluan",
+    "text": "6.3 Pendahuluan",
+    "crumbs": [
+      "Materi",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Turunan</span>"
+    ]
+  },
+  {
+    "objectID": "06-turunan.html#rangkuman",
+    "href": "06-turunan.html#rangkuman",
+    "title": "6  Turunan",
+    "section": "6.4 Rangkuman",
+    "text": "6.4 Rangkuman",
     "crumbs": [
       "Materi",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Turunan</span>"
@@ -242,8 +342,8 @@
     "objectID": "06-turunan.html#latihan",
     "href": "06-turunan.html#latihan",
     "title": "6  Turunan",
-    "section": "6.3 Latihan",
-    "text": "6.3 Latihan\n\n…\n…",
+    "section": "6.5 Latihan",
+    "text": "6.5 Latihan\n\n…\n…",
     "crumbs": [
       "Materi",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Turunan</span>"
@@ -254,18 +354,40 @@
     "href": "07-integral.html",
     "title": "7  Integral",
     "section": "",
-    "text": "7.1 Tujuan Pembelajaran\nTuliskan tujuan pembelajaran di sini.",
+    "text": "7.1 Tujuan Instruksional Khusus\nTuliskan tujuan pembelajaran di sini.",
     "crumbs": [
       "Materi",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Integral</span>"
     ]
   },
   {
-    "objectID": "07-integral.html#materi",
-    "href": "07-integral.html#materi",
+    "objectID": "07-integral.html#tujuan-responsi",
+    "href": "07-integral.html#tujuan-responsi",
     "title": "7  Integral",
-    "section": "7.2 Materi",
-    "text": "7.2 Materi\nTuliskan materi matriks di sini.",
+    "section": "7.2 Tujuan Responsi",
+    "text": "7.2 Tujuan Responsi\nTuliskan materi matriks di sini.",
+    "crumbs": [
+      "Materi",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Integral</span>"
+    ]
+  },
+  {
+    "objectID": "07-integral.html#pendahuluan",
+    "href": "07-integral.html#pendahuluan",
+    "title": "7  Integral",
+    "section": "7.3 Pendahuluan",
+    "text": "7.3 Pendahuluan",
+    "crumbs": [
+      "Materi",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Integral</span>"
+    ]
+  },
+  {
+    "objectID": "07-integral.html#rangkuman",
+    "href": "07-integral.html#rangkuman",
+    "title": "7  Integral",
+    "section": "7.4 Rangkuman",
+    "text": "7.4 Rangkuman",
     "crumbs": [
       "Materi",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Integral</span>"
@@ -275,8 +397,8 @@
     "objectID": "07-integral.html#latihan",
     "href": "07-integral.html#latihan",
     "title": "7  Integral",
-    "section": "7.3 Latihan",
-    "text": "7.3 Latihan\n\n…\n…",
+    "section": "7.5 Latihan",
+    "text": "7.5 Latihan\n\n…\n…",
     "crumbs": [
       "Materi",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Integral</span>"
