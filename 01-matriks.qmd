@@ -1,12 +1,434 @@
 # Matriks
 
 ## Tujuan Instruksional Khusus
-Tuliskan tujuan pembelajaran di sini.
+Mahasiswa dapat menjelaskan pengertian matriks, operasi matriks, serta menyelesaikan perhitungan yang melibatkan operasi matriks.
 
 ## Tujuan Responsi
-Tuliskan materi matriks di sini.
+1. Mahasiswa dapat menuliskan matriks dengan definisi matriks.
+2.	Mahasiswa dapat menghitung operasi pada matriks.
+3.	Mahasiswa dapat melakukan operasi baris dasar pada matriks.
+4.	Mahasiswa dapat mencari nilai determinan dari suatu matriks.
+5.	Mahasiswa dapat menentukan putaran dari suatu matriks.
+6.	Mahasiswa dapat menentukan invers dari suatu matriks
+
 
 ## Pendahuluan
+Matriks merupakan suatu cara untuk mengatur bilangan-bilangan. Matriks banyak digunakan untuk komputer grafis, simulasi, dan pemrosesan informasi secara umum. Resolusi layar pada monitor komputer menggunakan matriks.
+
+### Matriks dan Bentuknya
+
+**Matriks**
+
+::: {.theorem .definition #def-matriks title="Definisi"}
+Matriks adalah susunan bilangan berbentuk persegi panjang yang disusun dalam baris dan kolom.
+:::
+
+- Ukuran atau ordo dari suatu matriks ditentukan oleh banyaknya baris dan kolom yang membentuknya.
+- Nama matriks ditulis dengan huruf kapital: A,B,C,…. .
+- Anggota dari matriks A pada baris ke *i* dan kolom ke *j* dinotasikan a~ij~ . Matriks A dengan ordo mxn ditulis: A~mxn~.
+
+$$
+A_{mxn} = 
+\begin{pmatrix}
+a_{11} & a_{12} & ... & a_{1n} \\
+a_{21} & a_{22} & ... & a_{2n} \\
+... & ... & ... & ... \\
+a_{m1} & a_{m2} & ... & a_{mn}
+\end{pmatrix}
+$$
+
+::: {.theorem .example #exm-1 title="Contoh"}
+
+1. Matriks A berordo 2x3
+
+$$
+A =
+\begin{pmatrix}
+a_{11} & a_{12} & a_{13} \\
+a_{21} & a_{22} & a_{23}
+\end{pmatrix}
+$$
+2. Misalkan didefinisikan:
+
+$$
+a_{ij} = i + j
+$$
+maka diperoleh matriks A sebagai berikut:
+
+$$
+A_{23}=\begin{pmatrix}
+1+1 & 1+2 & 1+3 \\
+2+1 & 2+2 & 2+3 
+\end{pmatrix}
+=
+\begin{pmatrix}
+2 & 3 & 4 \\ 3 & 4 & 5 \end{pmatrix}
+$$
+
+:::
+
+**Anak Matriks**
+
+::: {.theorem .theorem #thm-invers title="Teorema"}
+Anak matriks dari matriks A adalah suatu matriks baru yang diperoleh dengan menghilangkan beberapa baris atau kolom pada matriks A.
+:::
+
+::: {.theorem .example #exm-1 title="Contoh"}
+
+Misal
+
+$$
+A_{23}= \begin{pmatrix} 2 & 3 & 4 \\ 3 & 4 & 5 \end{pmatrix}
+$$
+
+
+Beberapa anak matriks A dapat diperoleh dengan cara berikut:
+
+  - Diperoleh dengan menghilangkan kolom 1: 
+    $A_1= \begin{pmatrix} 3 & 4 \\ 4 & 5 \end{pmatrix}$
+
+  - Diperoleh dengan menghilangkan baris 2 dan kolom 3: 
+    $A_{23}= \begin{pmatrix} 2 & 3 \end{pmatrix}$
+
+
+:::
+
+**Matriks Khusus**
+
+Ada beberapa jenis matriks khusus sebagai berikut:
+
+1. Matriks segi: matriks yang jumlah barisnya sama dengan jumlah kolomnya.Pada contoh berikut, maka elemen diagonal utamanya yaitu $a_{11}, a_{22},..., a_{mn}$.
+$$
+A_{mxn} = 
+\begin{pmatrix}
+a_{11} & a_{12} & ... & a_{1n} \\
+a_{21} & a_{22} & ... & a_{2n} \\
+... & ... & ... & ... \\
+a_{m1} & a_{m2} & ... & a_{mn}
+\end{pmatrix}
+$$
+
+2. Matriks segitiga atas: matriks yang semua elemen di bawah diagonal utamanya bernilai nol.
+
+$$
+A_{mxn} = 
+\begin{pmatrix}
+a_{11} & a_{12} & ... & a_{1n} \\
+0 & a_{22} & ... & a_{2n} \\
+... & ... & ... & ... \\
+0 & 0 & ... & a_{mn}
+\end{pmatrix}
+$$
+3. Matriks segitiga bawah: matriks yang semua elemen di atas diagonal utamanya bernilai nol.
+
+$$
+A_{mxn} = 
+\begin{pmatrix}
+a_{11} & 0 & ... & 0 \\
+a_{21} & a_{22} & ... & 0 \\
+... & ... & ... & ... \\
+a_{m1} & a_{m2} & ... & a_{mn}
+\end{pmatrix}
+$$
+4. Matriks diagonal: matriks yang semua elemen selain diagonal utamanya bernilai nol.
+
+$$
+A_{mxn} = 
+\begin{pmatrix}
+a_{11} & 0 & ... & 0 \\
+0 & a_{22} & ... & 0 \\
+... & ... & ... & ... \\
+0 & 0 & ... & a_{mn}
+\end{pmatrix}
+$$
+5. Matriks identitas: matriks segi yang semua elemen diagonal utamanya bernilai satu dan selainnya bernilai nol.
+
+$$
+A_{mxn} = 
+\begin{pmatrix}
+1 & 0 & ... & 0 \\
+0 & 1 & ... & 0 \\
+... & ... & ... & ... \\
+0 & 0 & ... & 1
+\end{pmatrix}
+$$
+
+6. Matriks nol: matriks yang semua elemennya bernilai nol.
+
+$$
+A_{mxn} = 
+\begin{pmatrix}
+0 & 0 & ... & 0 \\
+0 & 0 & ... & 0 \\
+... & ... & ... & ... \\
+0 & 0 & ... & 0
+\end{pmatrix}
+$$
+
+### Operasi Matriks
+
+**Penjumlahan atau pengurangan matriks**
+
+::: {.theorem .definition #def-matriks title="Definisi"}
+**Penjumlahan atau pengurangan matriks**
+Dua matriks dapat dijumlahkan atau dikurangkan jika dan hanya jika kedua matriks tersebut memiliki ukuran yang sama. Artinya jika $A=(a_{ij})_{mxn}$ dan $B=(b_{ij})_{mxn}$ maka
+
+$$
+A \pm B = \begin{pmatrix} a_{ij} \pm b_{ij} \end{pmatrix}_{m \times n}
+$$
+:::
+
+::: {.theorem .example #exm-1 title="Contoh"}
+
+Misalkan $A=\begin{pmatrix}1&2\\3&4 \end{pmatrix}$ dan $B=\begin{pmatrix}5&6\\7&8 \end{pmatrix}$, maka diperoleh
+$$
+A+B = \begin{pmatrix}1&2\\3&4 \end{pmatrix} + \begin{pmatrix}5&6\\7&8 \end{pmatrix}=\begin{pmatrix}6&8\\10&12 \end{pmatrix}.
+$$
+:::
+
+**Perkalian matriks dengan skalar**
+
+::: {.theorem .definition #def-matriks title="Definisi"}
+
+**Perkalian matriks dengan skalar**
+Suatu matriks dapat dikalikan dengan skalar.Jika $A=(a_{ij})_{m \times n} $ dan k suatu skalar maka
+
+$$
+kA=(ka_{ij})_{m \times n}
+$$
+:::
+
+
+::: {.theorem .example #exm-1 title="Contoh"}
+Misalkan $A=\begin{pmatrix}1&2 \\ 3&4 \end{pmatrix}$ dan k = 3 maka diperoleh
+$$
+3A=3\begin{pmatrix}1&2 \\ 3&4 \end{pmatrix}=\begin{pmatrix}3 \times 1& 3 \times2 \\ 3\times3&3\times4 \end{pmatrix}=\begin{pmatrix}3&6 \\ 9&12 \end{pmatrix}
+$$
+:::
+
+::: {.theorem .proposition}
+
+**Sifat-sifat Penjumlahan Matriks dan Perkalian dengan Skalar**
+
+Jika $A$, $B$, dan $C$ adalah matriks-matriks berukuran sama, serta 
+$k_1$ dan $k_2$ adalah skalar, maka berlaku:
+
+1. $(A+B)+C = A+(B+C)$  
+2. $A+(-A)=O$, dengan $O$ matriks nol  
+3. $A+B = B + A$  
+4. $k_1(A+B)=k_1A+k_1B$  
+5. $(k_1+k_2)A=k_1A+k_2A$  
+6. $(k_1k_2)A=k_1(k_2A)$  
+7. $OA=O$
+
+:::
+
+
+::: {.theorem .example #exm-1 title="Contoh"}
+
+Misalkan $A=\begin{pmatrix}1&2\end{pmatrix},B=\begin{pmatrix}3&4\end{pmatrix}$ dan $C=\begin{pmatrix}5\\6\end{pmatrix}$. Tentukan nilai dari (jika ada):
+
+a. $A-B$
+b. $2A-3B$
+c. $4C$
+d. $A+C$
+:::
+
+Jawab:
+
+  a. $A-B=\begin{pmatrix}1&2\end{pmatrix}-\begin{pmatrix}3&4\end{pmatrix}=\begin{pmatrix}1-3&2-4\end{pmatrix}=\begin{pmatrix}-2&-2\end{pmatrix}$
+  b. $2A-3B=2\begin{pmatrix}1&2\end{pmatrix}-3\begin{pmatrix}3&4\end{pmatrix}=\begin{pmatrix}2&4\end{pmatrix}-\begin{pmatrix}9&12\end{pmatrix}=\begin{pmatrix}-7&-8\end{pmatrix}$
+  c. $4C=4\begin{pmatrix}5\\6\end{pmatrix}=\begin{pmatrix}20\\24\end{pmatrix}$
+  d. $A+C=\begin{pmatrix}1&2\end{pmatrix}+\begin{pmatrix}5\\6\end{pmatrix}$ tidak terdefinisi, karena ordo matriks A tidak sama dengan ordo matriks C.
+
+**Perkalian Matriks**
+
+::: {.theorem .definition #def-matriks title="Definisi"}
+**Perkalian matriks** 
+Dua matriks A dan B dapat dikalikan (AB) jika dan hanya jika matriks A memiliki banyaknya kolom yang sama dengan banyaknya baris pada matriks B. Artinya  jika $A=(a_{ij})_{m \times n}$ dan $B= (b_{ij})_{n \times p}$ maka
+
+$$
+AB=(c_{ij})_{m \times p} \text{ dengan } c_{ij}=a_{i1}b_{1j}+a_{i2}b_{2j}+...+a_{im}b_{nj}
+$$
+:::
+
+
+::: {.panel-tabset}
+
+## Langkah 1 — pilih baris dari A
+
+$$
+A=
+\begin{pmatrix}
+\boxed{a_{11}} & \boxed{a_{12}} & \cdots & \boxed{a_{1n}} \\
+a_{21} & a_{22} & \cdots & a_{2n} \\
+\vdots & \vdots &        & \vdots \\
+a_{m1} & a_{m2} & \cdots & a_{mn}
+\end{pmatrix},
+\quad
+B=
+\begin{pmatrix}
+b_{11} & b_{12} & \cdots & b_{1p} \\
+b_{21} & b_{22} & \cdots & b_{2p} \\
+\vdots & \vdots &        & \vdots \\
+b_{n1} & b_{n2} & \cdots & b_{np}
+\end{pmatrix}
+$$
+
+## Langkah 2 — pilih kolom dari B
+
+$$
+A=
+\begin{pmatrix}
+a_{11} & a_{12} & \cdots & a_{1n} \\
+a_{21} & a_{22} & \cdots & a_{2n} \\
+\vdots & \vdots &        & \vdots \\
+a_{m1} & a_{m2} & \cdots & a_{mn}
+\end{pmatrix},
+\quad
+B=
+\begin{pmatrix}
+\boxed{b_{11}} & b_{12} & \cdots & b_{1p} \\
+\boxed{b_{21}} & b_{22} & \cdots & b_{2p} \\
+\vdots & \vdots &        & \vdots \\
+\boxed{b_{n1}} & b_{n2} & \cdots & b_{np}
+\end{pmatrix}
+$$
+
+## Langkah 3 — hasilkan c_{11}
+
+$$
+c_{11}=a_{11}b_{11}+a_{12}b_{21}+\cdots+a_{1n}b_{n1}
+$$
+
+$$
+C=
+\begin{pmatrix}
+\boxed{c_{11}} & c_{12} & \cdots & c_{1p} \\
+c_{21} & c_{22} & \cdots & c_{2p} \\
+\vdots & \vdots &        & \vdots \\
+c_{m1} & c_{m2} & \cdots & c_{mp}
+\end{pmatrix}
+$$
+
+:::
+
+::: {.example}
+
+Misalkan
+
+$$
+A=
+\begin{pmatrix}
+1 & 3 & 5 \\
+2 & 4 & 6
+\end{pmatrix}
+\quad
+\text{dan}
+\quad
+B=
+\begin{pmatrix}
+2 & 0 \\
+3 & 1 \\
+4 & 5
+\end{pmatrix}
+$$
+
+Tentukan hasil perkalian \( AB \).
+
+---
+
+::: {.panel-tabset}
+
+## Langkah 1 — Pilih baris pertama A
+
+$$
+A=
+\begin{pmatrix}
+\color{#1f77b4}{1} & \color{#1f77b4}{3} & \color{#1f77b4}{5} \\
+2 & 4 & 6
+\end{pmatrix}
+$$
+
+Baris pertama:
+\[
+\color{#1f77b4}{(1 \; 3 \; 5)}
+\]
+
+---
+
+## Langkah 2 — Pilih kolom pertama B
+
+$$
+B=
+\begin{pmatrix}
+\color{#2ca02c}{2} & 0 \\
+\color{#2ca02c}{3} & 1 \\
+\color{#2ca02c}{4} & 5
+\end{pmatrix}
+$$
+
+Kolom pertama:
+\[
+\color{#2ca02c}{
+\begin{pmatrix}
+2\\3\\4
+\end{pmatrix}}
+\]
+
+---
+
+## Langkah 3 — Hitung \( c_{11} \)
+
+$$
+\color{#d62728}{
+c_{11}
+= (1\times2) + (3\times3) + (5\times4)
+}
+$$
+
+$$
+\color{#d62728}{
+= 2 + 9 + 20 = 31
+}
+$$
+
+---
+
+## Langkah 4 — Hasil akhir
+
+$$
+AB=
+\begin{pmatrix}
+\color{#d62728}{31} & 28 \\
+40 & 34
+\end{pmatrix}
+$$
+
+:::
+
+:::
+
+
+::: {.theorem .proposition}
+
+**Sifat-sifat Perkalian Matriks**
+
+Jika $A$, $B$, dan $C$ matriks berukuran sesuai dan $k$ skalar, maka:
+
+1. $(AB)C = A(BC)$
+2. $A(B + C) = AB + AC$
+3. $(B + C)A = BA + CA$
+4. $k(AB) = (kA)B = A(kB)$
+
+**Catatan:** Secara umum, $AB \ne BA$.
+
+:::
+
+#### Matriks Putaran/Transpose
+
+
+
 
 ## Rangkuman
 

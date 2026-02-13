@@ -1,5 +1,9 @@
 project:
   type: book
+  preview:
+    watch-inputs: true
+    navigate: true
+
 
 book:
   title: "Matematika untuk Pendidikan Tinggi Vokasi"
@@ -24,6 +28,17 @@ bibliography: references.bib
 
 format:
   html:
+    number-sections: true
+    number-depth: 3
+    css: styles.css
+    toc: true
+    toc-depth: 3
+    toc-location: right
+    toc-expand: true
+    sidebar:
+      style: "docked"
+      search: true
+      collapse-level: 2
     theme:
       - cosmo
       - brand

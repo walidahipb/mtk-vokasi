@@ -1,0 +1,48 @@
+/* =========================
+   THEOREM BOX STYLE
+   ========================= */
+
+.theorem {
+  border: 1px solid #d0d7de;
+  border-left: 5px solid #2c3e50;
+  border-radius: 6px;
+  padding: 1rem 1.2rem;
+  margin: 1.2rem 0;
+  background-color: #f8f9fa;
+}
+
+.theorem .theorem-title {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+/* Warna khusus per jenis */
+
+.theorem.definition {
+  border-left-color: #1f77b4;
+}
+
+.theorem.theorem {
+  border-left-color: #d62728;
+}
+
+.theorem.example {
+  border-left-color: #2ca02c;
+}
+
+.theorem.proposition {
+  border-left-color: #9467bd;
+  background-color: #faf7ff;
+}
+
+h4 {
+  margin-top: 1.6rem;
+  margin-bottom: 0.6rem;
+  padding-left: 0.75rem;
+  border-left: 4px solid #2c3e50;
+  font-weight: 700;
+}
+
+
+.panel-tabset .nav-tabs { margin-bottom: 1rem; }
+.panel-tabset .tab-content { padding-top: .5rem; }
