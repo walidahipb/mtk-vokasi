@@ -43,6 +43,8 @@ format:
     theme:
       - cosmo
       - brand
+output-dir: docs
+
   #pdf:
    # documentclass: scrreprt
 
