@@ -32,7 +32,7 @@ A_{mxn} =
 \begin{pmatrix}
 a_{11} & a_{12} & ... & a_{1n} \\
 a_{21} & a_{22} & ... & a_{2n} \\
-... & ... & ... & ... \\
+\vdots & \vdots & \ddots & \vdots \\
 a_{m1} & a_{m2} & ... & a_{mn}
 \end{pmatrix}
 $$
@@ -67,7 +67,7 @@ $$
 
 :::
 
-**Anak Matriks**
+#### Anak Matriks
 
 ::: {.theorem .theorem #thm-invers title="Teorema"}
 Anak matriks dari matriks A adalah suatu matriks baru yang diperoleh dengan menghilangkan beberapa baris atau kolom pada matriks A.
@@ -93,7 +93,7 @@ Beberapa anak matriks A dapat diperoleh dengan cara berikut:
 
 :::
 
-**Matriks Khusus**
+#### Matriks Khusus
 
 Ada beberapa jenis matriks khusus sebagai berikut:
 
@@ -103,7 +103,7 @@ A_{mxn} =
 \begin{pmatrix}
 a_{11} & a_{12} & ... & a_{1n} \\
 a_{21} & a_{22} & ... & a_{2n} \\
-... & ... & ... & ... \\
+\vdots & \vdots & \ddots & \vdots \\
 a_{m1} & a_{m2} & ... & a_{mn}
 \end{pmatrix}
 $$
@@ -115,7 +115,7 @@ A_{mxn} =
 \begin{pmatrix}
 a_{11} & a_{12} & ... & a_{1n} \\
 0 & a_{22} & ... & a_{2n} \\
-... & ... & ... & ... \\
+\vdots & \vdots & \ddots & \vdots \\
 0 & 0 & ... & a_{mn}
 \end{pmatrix}
 $$
@@ -126,7 +126,7 @@ A_{mxn} =
 \begin{pmatrix}
 a_{11} & 0 & ... & 0 \\
 a_{21} & a_{22} & ... & 0 \\
-... & ... & ... & ... \\
+\vdots & \vdots & \ddots & \vdots \\
 a_{m1} & a_{m2} & ... & a_{mn}
 \end{pmatrix}
 $$
@@ -137,7 +137,7 @@ A_{mxn} =
 \begin{pmatrix}
 a_{11} & 0 & ... & 0 \\
 0 & a_{22} & ... & 0 \\
-... & ... & ... & ... \\
+\vdots & \vdots & \ddots & \vdots \\
 0 & 0 & ... & a_{mn}
 \end{pmatrix}
 $$
@@ -148,7 +148,7 @@ A_{mxn} =
 \begin{pmatrix}
 1 & 0 & ... & 0 \\
 0 & 1 & ... & 0 \\
-... & ... & ... & ... \\
+\vdots & \vdots & \ddots & \vdots \\
 0 & 0 & ... & 1
 \end{pmatrix}
 $$
@@ -160,16 +160,17 @@ A_{mxn} =
 \begin{pmatrix}
 0 & 0 & ... & 0 \\
 0 & 0 & ... & 0 \\
-... & ... & ... & ... \\
+\vdots & \vdots & \ddots & \vdots \\
 0 & 0 & ... & 0
 \end{pmatrix}
 $$
 
 ### Operasi Matriks
 
-**Penjumlahan atau pengurangan matriks**
+#### Penjumlahan atau pengurangan matriks
 
 ::: {.theorem .definition #def-matriks title="Definisi"}
+
 **Penjumlahan atau pengurangan matriks**
 Dua matriks dapat dijumlahkan atau dikurangkan jika dan hanya jika kedua matriks tersebut memiliki ukuran yang sama. Artinya jika $A=(a_{ij})_{mxn}$ dan $B=(b_{ij})_{mxn}$ maka
 
@@ -186,7 +187,7 @@ A+B = \begin{pmatrix}1&2\\3&4 \end{pmatrix} + \begin{pmatrix}5&6\\7&8 \end{pmatr
 $$
 :::
 
-**Perkalian matriks dengan skalar**
+#### Perkalian matriks dengan skalar
 
 ::: {.theorem .definition #def-matriks title="Definisi"}
 
@@ -241,7 +242,7 @@ Jawab:
   c. $4C=4\begin{pmatrix}5\\6\end{pmatrix}=\begin{pmatrix}20\\24\end{pmatrix}$
   d. $A+C=\begin{pmatrix}1&2\end{pmatrix}+\begin{pmatrix}5\\6\end{pmatrix}$ tidak terdefinisi, karena ordo matriks A tidak sama dengan ordo matriks C.
 
-**Perkalian Matriks**
+#### Perkalian Matriks
 
 ::: {.theorem .definition #def-matriks title="Definisi"}
 **Perkalian matriks** 
@@ -427,10 +428,1362 @@ Jika $A$, $B$, dan $C$ matriks berukuran sesuai dan $k$ skalar, maka:
 
 #### Matriks Putaran/Transpose
 
+::: {.theorem .definition #def-matriks title="Definisi"}
+
+**Matriks Putaran (Transpose)**
+
+Sebuah matriks $A$ dapat ditransposkan menjadi $A^T$ dengan cara
+mengubah setiap elemen $a_{ij}$ menjadi $a_{ji}$.
+Dengan kata lain, baris menjadi kolom dan kolom menjadi baris.
+
+Artinya, jika
+
+$$
+A = (a_{ij})_{m \times n},
+$$
+
+maka
+
+$$
+A^T = (a_{ji})_{n \times m}.
+$$
+
+:::
+
+::: {.theorem .proposition}
+
+**Sifat-sifat Matriks Transpose**
+
+Untuk matriks $A$ dan $B$ berukuran sesuai serta skalar $k$, berlaku:
+
+1. $(A + B)^T = A^T + B^T$
+2. $(A^T)^T = A$
+3. $(kA)^T = kA^T$
+4. $(AB)^T = B^T A^T$
+
+:::
+
+::: {.theorem .example #exm-1 title="Contoh"}
+
+Misalkan
+
+$$
+A =
+\begin{pmatrix}
+1 & 3 & 5 \\
+2 & 4 & 6
+\end{pmatrix}, \quad
+B =
+\begin{pmatrix}
+2 & 0 \\
+3 & 1 \\
+4 & 5
+\end{pmatrix}, \quad
+C =
+\begin{pmatrix}
+1 & 2 \\
+2 & 3
+\end{pmatrix}.
+$$
+
+Ukuran: $A$ berukuran $2\times 3$, $B$ berukuran $3\times 2$, sehingga $B^T$ berukuran $2\times 3$.
+Matriks $C$ berukuran $2\times 2$, sehingga $CB^T$ terdefinisi dan hasilnya berukuran $2\times 3$.
+
+**Tentukan:**
+1. $A - B^T$
+2. $B^T A^T$
+3. $CB^T$
+
+**Jawab.**
+
+##### (a) $A - B^T$ {.unnumbered}
+
+$$
+B^T=
+\begin{pmatrix}
+2 & 3 & 4\\
+0 & 1 & 5
+\end{pmatrix}
+$$
+
+$$
+\begin{aligned}
+A-B^T
+&=
+\begin{pmatrix}1&3&5\\2&4&6\end{pmatrix}
+-
+\begin{pmatrix}2&3&4\\0&1&5\end{pmatrix}\\
+&=
+\begin{pmatrix}-1&0&1\\2&3&1\end{pmatrix}.
+\end{aligned}
+$$
+
+##### (b) $B^T A^T$ {.unnumbered}
+
+$$
+A^T=
+\begin{pmatrix}
+1 & 2\\
+3 & 4\\
+5 & 6
+\end{pmatrix}
+$$
+
+Contoh perhitungan satu elemen:
+$$
+(B^T A^T)_{11} = (2,3,4)\cdot(1,3,5)=2+9+20=31.
+$$
+
+$$
+B^T A^T=
+\begin{pmatrix}
+2 & 3 & 4\\
+0 & 1 & 5
+\end{pmatrix}
+\begin{pmatrix}
+1 & 2\\
+3 & 4\\
+5 & 6
+\end{pmatrix}
+=
+\boxed{
+\begin{pmatrix}
+31 & 40\\
+28 & 34
+\end{pmatrix}}
+$$
+
+##### (c) $CB^T$ {.unnumbered}
+
+$$
+CB^T=
+\begin{pmatrix}
+1 & 2\\
+2 & 3
+\end{pmatrix}
+\begin{pmatrix}
+2 & 3 & 4\\
+0 & 1 & 5
+\end{pmatrix}
+=
+\boxed{
+\begin{pmatrix}
+2 & 5 & 14\\
+4 & 9 & 23
+\end{pmatrix}}
+$$
+
+:::
+
+### Operasi Baris Dasar (OBD)
+
+Jika B merupakan sebuah matriks hasil serangkaian operasi baris dasar (operasi baris elementer) terhadap matriks A maka A dikatakan ekivalen terhadap matriks B. 
+
+Ada tiga jenis operasi baris dasar terhadap suatu matriks, antara lain :
+
+1.	Saling menukarkan baris ke-i dan baris ke-j. Notasi : $E_{ij}$.
+2.	Mengalikan baris ke-i dengan suatu konstanta k. Notasi : $E_{i(k)}$.
+3.	Menempatkan baris ke-i dengan k kali baris ke-j ditambah baris ke-i. Notasi : $E_{ij(k)}$.
+
+::: {.theorem .example #exm-e12-visual title="Contoh"}
+
+Misalkan
+
+<div class="matrix-flow">
+
+<div class="matrix-box">
+
+$$
+A=
+\begin{pmatrix}
+\color{#1f77b4}{1} & \color{#1f77b4}{3} & \color{#1f77b4}{5}\\
+\color{#d62728}{2} & \color{#d62728}{1} & \color{#d62728}{1}\\
+2 & 4 & 6
+\end{pmatrix}
+$$
+
+<div class="matrix-label">A</div>
+</div>
+
+<div class="matrix-mid">
+
+<div class="matrix-op">$E_{12}$</div>
+
+<div class="arrow">⟶</div>
+
+<div class="matrix-note">(tukar $R_1$ dan $R_2$)</div>
+
+</div>
+
+<div class="matrix-box">
+
+$$
+B=
+\begin{pmatrix}
+\color{#d62728}{2} & \color{#d62728}{1} & \color{#d62728}{1}\\
+\color{#1f77b4}{1} & \color{#1f77b4}{3} & \color{#1f77b4}{5}\\
+2 & 4 & 6
+\end{pmatrix}
+$$
+
+<div class="matrix-label">B</div>
+</div>
+
+</div>
+
+:::
+
+::: {.theorem .example #exm-e2-3-visual title="Contoh"}
+
+<div class="matrix-flow">
+
+<div class="matrix-box">
+
+$$
+A=
+\begin{pmatrix}
+1 & 3 & 5\\
+\color{#2ca02c}{2} & \color{#2ca02c}{1} & \color{#2ca02c}{1}\\
+2 & 4 & 6
+\end{pmatrix}
+$$
+
+<div class="matrix-label">A</div>
+</div>
+
+<div class="matrix-mid">
+
+<div class="matrix-op">$E_{2(3)}$</div>
+
+<div class="arrow">⟶</div>
+
+<div class="matrix-note">($R_2 \leftarrow 3R_2$)</div>
+
+</div>
+
+<div class="matrix-box">
+
+$$
+B=
+\begin{pmatrix}
+1 & 3 & 5\\
+\color{#d62728}{6} & \color{#d62728}{3} & \color{#d62728}{3}\\
+2 & 4 & 6
+\end{pmatrix}
+$$
+
+<div class="matrix-label">B</div>
+</div>
+
+</div>
+
+:::
+
+::: {.theorem .example #exm-e23m1-visual title="Contoh"}
+
+<div class="matrix-flow">
+
+<div class="matrix-box">
+
+$$
+A=
+\begin{pmatrix}
+1 & 3 & 5\\
+\color{#1f77b4}{2} & \color{#1f77b4}{1} & \color{#1f77b4}{1}\\
+\color{#2ca02c}{2} & \color{#2ca02c}{4} & \color{#2ca02c}{6}
+\end{pmatrix}
+$$
+
+<div class="matrix-label">A</div>
+</div>
+
+<div class="matrix-mid">
+
+<div class="matrix-op">$E_{23(-1)}$</div>
+
+<div class="arrow">⟶</div>
+
+<div class="matrix-note">($R_2 \leftarrow R_2 - R_3$)</div>
+
+</div>
+
+<div class="matrix-box">
+
+$$
+B=
+\begin{pmatrix}
+1 & 3 & 5\\
+\color{#d62728}{0} & \color{#d62728}{-3} & \color{#d62728}{-5}\\
+2 & 4 & 6
+\end{pmatrix}
+$$
+
+<div class="matrix-label">B</div>
+</div>
+
+</div>
+
+:::
+
+Setelah memahami bagaimana matriks elementer bekerja pada suatu matriks,
+selanjutnya kita akan menggunakan operasi baris dasar (OBD) secara berurutan
+untuk mengubah suatu matriks menjadi bentuk segitiga atas dan segitiga bawah.
+
+::: {.theorem .example #exm-obd-chain title="Contoh"}
+
+Misalkan
+
+$$
+A =
+\begin{pmatrix}
+1 & 3 & 5\\
+2 & 5 & 1\\
+2 & 4 & 1
+\end{pmatrix}.
+$$
+
+a. Dengan menggunakan OBD, bentuklah matriks segitiga atas dari $A$.  
+b. Dengan menggunakan OBD, bentuklah matriks segitiga bawah dari $A$.
+
+---
+
+### Jawab {.unnumbered}
+
+#### (a) Matriks segitiga atas {.unnumbered}
+
+$$
+\begin{aligned}
+A
+&=
+\begin{pmatrix}
+1 & 3 & 5\\
+2 & 5 & 1\\
+2 & 4 & 1
+\end{pmatrix}
+\xrightarrow{E_{21(-2)}}
+\begin{pmatrix}
+1 & 3 & 5\\
+0 & -1 & -9\\
+2 & 4 & 1
+\end{pmatrix}
+\xrightarrow{E_{31(-2)}}
+\begin{pmatrix}
+1 & 3 & 5\\
+0 & -1 & -9\\
+0 & -2 & -9
+\end{pmatrix}
+\xrightarrow{E_{32(-2)}}
+\begin{pmatrix}
+1 & 3 & 5\\
+0 & -1 & -9\\
+0 & 0 & 9
+\end{pmatrix}.
+\end{aligned}
+$$
+
+---
+
+#### (b) Matriks segitiga bawah {.unnumbered}
+
+$$
+\begin{aligned}
+A
+&=
+\begin{pmatrix}
+1 & 3 & 5\\
+2 & 5 & 1\\
+2 & 4 & 1
+\end{pmatrix}
+\xrightarrow{E_{23(-1)}}
+\begin{pmatrix}
+1 & 3 & 5\\
+0 & 1 & 0\\
+2 & 4 & 1
+\end{pmatrix}
+\xrightarrow{E_{13(-5)}}
+\begin{pmatrix}
+-9 & -17 & 0\\
+0 & 1 & 0\\
+2 & 4 & 1
+\end{pmatrix}
+\xrightarrow{E_{12(17)}}
+\begin{pmatrix}
+-9 & 0 & 0\\
+0 & 1 & 0\\
+2 & 4 & 1
+\end{pmatrix}.
+\end{aligned}
+$$
+
+:::
+
+### Determinan Matriks
+
+Dalam aljabar linear, determinan digunakan untuk mengetahui apakah suatu matriks persegi dapat dibalik (invertible) atau tidak. Nilai determinan juga berkaitan dengan perubahan skala suatu transformasi linear.
+
+Determinan adalah suatu nilai skalar yang didefinisikan untuk **matriks segi** dan digunakan untuk menentukan apakah matriks tersebut memiliki invers. Selain itu, determinan juga memiliki peranan penting dalam sistem persamaan linear dan transformasi linear.
+
+::: {.theorem .definition #def-determinan-2x2 title="Definisi"}
+
+**Determinan matriks ukuran $2 \times 2$**
+
+Determinan matriks
+
+$$
+A =
+\begin{pmatrix}
+a & b \\
+c & d
+\end{pmatrix}
+$$
+
+didefinisikan sebagai
+
+$$
+\det(A) = |A| = ad - bc.
+$$
+
+:::
+
+Berikut ini diberikan contoh perhitungan determinan matriks
+berukuran $2 \times 2$ menggunakan rumus yang telah didefinisikan.
+
+::: {.theorem .example #exm-det-2x2 title="Contoh"}
+
+Misalkan
+
+$$
+A =
+\begin{pmatrix}
+1 & 3 \\
+2 & 4
+\end{pmatrix}.
+$$
+
+Tentukan determinan matriks $A$.
+
+---
+
+### Jawab {.unnumbered}
+
+$$
+\det(A) = |A|
+= (1)(4) - (3)(2)
+= 4 - 6
+= -2.
+$$
+
+:::
+
+#### Metode Sarrus
+
+::: {.theorem .definition #def-determinan-3x3-sarrus title="Definisi (Determinan matriks ukuran $3 \times 3$ dengan metode Sarrus)"}
+
+Misalkan $A$ adalah matriks berukuran $3 \times 3$ yang didefinisikan sebagai
+
+$$
+A =
+\begin{pmatrix}
+a & b & c \\
+d & e & f \\
+g & h & i
+\end{pmatrix}.
+$$
+
+Dengan menggunakan metode Sarrus, determinan matriks $A$ adalah
+
+$$
+\det(A) = |A|
+= (aei + bfg + cdh) - (ceg + afh + bdi).
+$$
+
+:::
+
+---
+
+Perhatikan bahwa nilai determinan dengan menggunakan metode Sarrus dapat diperoleh dengan langkah berikut:
+
+Misalkan
+
+$$
+A=
+\begin{pmatrix}
+a & b & c\\
+d & e & f\\
+g & h & i
+\end{pmatrix}.
+$$
+
+**Tambahkan dua kolom pertama:**
+
+$$
+\left(
+\begin{array}{ccc|cc}
+a & b & c & a & b\\
+d & e & f & d & e\\
+g & h & i & g & h
+\end{array}
+\right)
+$$
+
+---
+
+**Diagonal dari kiri atas ke kanan bawah (warna biru)**
+
+Kalikan setiap 3 bilangan lalu gabungkan dengan tanda "+"
+
+$$
+\left(
+\begin{array}{ccc|cc}
+\color{blue}{a} & \color{blue}{b} & \color{blue}{c} & a & b\\
+d & \color{blue}{e} & \color{blue}{f} & \color{blue}{d} & e\\
+g & h & \color{blue}{i} & \color{blue}{g} & \color{blue}{h}
+\end{array}
+\right)
+$$
+
+**Hasil:**
+$$
+aei + bfg + cdh
+$$
+
+---
+
+**Diagonal dari kiri bawah ke kanan atas (warna merah)**
+
+Kalikan setiap 3 bilangan lalu gabungkan dengan tanda "+"
+
+$$
+\left(
+\begin{array}{ccc|cc}
+a & b & \color{red}{c} & \color{red}{a} & \color{red}{b}\\
+d & \color{red}{e} & \color{red}{f} & \color{red}{d} & e\\
+\color{red}{g} & \color{red}{h} & \color{red}{i} & g & h
+\end{array}
+\right)
+$$
+
+**Hasil:**
+$$
+gec - hfa - idb
+$$
+
+---
+
+**Determinan**
+
+$$
+\det(A)
+=
+( \color{blue}{aei + bfg + cdh} )
+-
+( \color{red}{gec + hfa + idb} ).
+$$
+
+Metode Sarrus dinamai dari Pierre Frédéric Sarrus (1798–1861), seorang profesor matematika di University of Strasbourg, Perancis. Metode ini diperkenalkan pada abad ke-19 sebagai cara cepat menghitung determinan matriks berukuran $3 \times 3$. Metode ini bersifat khusus dan tidak dapat digunakan untuk matriks berukuran lebih besar.
+
+Selain dengan metode Sarrus, cara lain untuk menghitung nilai determinan yaitu dengan metode minor-kofaktoratau reduksi baris.
+
+#### Metode Minor-Kofaktor
+
+::: {.theorem .definition #def-determinan-3x3-kofaktor title="Definisi (Determinan matriks ukuran $3 \times 3$ dengan metode minor kofaktor)"}
+
+Misalkan $A$ adalah matriks berukuran $3 \times 3$ yang didefinisikan sebagai
+
+$$
+A =
+\begin{pmatrix}
+a_{11} & a_{12} & a_{13} \\
+a_{21} & a_{22} & a_{23} \\
+a_{31} & a_{32} & a_{33}
+\end{pmatrix}.
+$$
+
+Untuk setiap elemen $a_{ij}$, minor $A_{ij}$ adalah determinan dari matriks
+yang diperoleh dengan menghilangkan baris ke-$i$ dan kolom ke-$j$.
+
+Dengan menggunakan metode minor kofaktor, determinan matriks $A$
+dapat dihitung sebagai berikut.
+
+---
+
+**a. Ekspansi menurut baris ke-$i$**
+
+$$
+\det(A) = |A|
+=
+(-1)^{i+1} a_{i1} |A_{i1}|
++
+(-1)^{i+2} a_{i2} |A_{i2}|
++
+(-1)^{i+3} a_{i3} |A_{i3}|,
+$$
+
+untuk setiap baris $i$.
+
+---
+
+**b. Ekspansi menurut kolom ke-$j$**
+
+$$
+\det(A) = |A|
+=
+(-1)^{1+j} a_{1j} |A_{1j}|
++
+(-1)^{2+j} a_{2j} |A_{2j}|
++
+(-1)^{3+j} a_{3j} |A_{3j}|,
+$$
+
+untuk setiap kolom $j$.
+
+:::
+
+::: {.callout-tip title="Pola Tanda Kofaktor"}
+
+Tanda kofaktor mengikuti pola
+
+$$
+(-1)^{i+j}
+$$
+
+yang membentuk pola tanda berikut:
+
+$$
+\begin{pmatrix}
++ & - & + \\
+- & + & - \\
++ & - & +
+\end{pmatrix}
+$$
+
+Artinya:
+- Jika $i+j$ genap → tanda positif.
+- Jika $i+j$ ganjil → tanda negatif.
+
+:::
+
+::: {.theorem .example #exm-det-3x3 title="Contoh"}
+
+Hitunglah determinan matriks berikut
+
+$$
+A=
+\begin{pmatrix}
+1 & 2 & 0\\
+3 & 2 & 3\\
+4 & 1 & 1
+\end{pmatrix}.
+$$
+
+---
+
+### Jawab
+
+---
+
+### Cara 1 : Dengan metode Sarrus {.unnumbered}
+
+Tambahkan dua kolom pertama:
+
+$$
+\left(
+\begin{array}{ccc|cc}
+1 & 2 & 0 & 1 & 2\\
+3 & 2 & 3 & 3 & 2\\
+4 & 1 & 1 & 4 & 1
+\end{array}
+\right)
+$$
+
+
+$$
+|A|
+=
+(1\cdot2\cdot1 + 2\cdot3\cdot4 + 0\cdot3\cdot1)
+-
+(0\cdot2\cdot4 + 1\cdot3\cdot1 + 2\cdot3\cdot1)
+$$
+
+$$
+=
+(2 + 24 + 0)
+-
+(0 + 3 + 6)
+$$
+
+$$
+= 26 - 9
+= 17.
+$$
+
+---
+
+### Cara 2 : Dengan metode Minor Kofaktor {.unnumbered}
+
+Pilih baris pertama.
+
+$$
+\det(A)
+=
+(-1)^{1+1} a_{11}|A_{11}|
++
+(-1)^{1+2} a_{12}|A_{12}|
++
+(-1)^{1+3} a_{13}|A_{13}|
+$$
+
+$$
+=
+(1)
+\begin{vmatrix}
+2 & 3\\
+1 & 1
+\end{vmatrix}
+-
+(2)
+\begin{vmatrix}
+3 & 3\\
+4 & 1
+\end{vmatrix}
++
+(0)
+\begin{vmatrix}
+3 & 2\\
+4 & 1
+\end{vmatrix}
+$$
+
+$$
+=
+1(2\cdot1 - 3\cdot1)
+-
+2(3\cdot1 - 3\cdot4)
++
+0
+$$
+
+$$
+=
+1(2 - 3)
+-
+2(3 - 12)
+$$
+
+$$
+=
+-1 + 18
+= 17.
+$$
+
+:::
+
+
+::: {.theorem .definition #def-determinan-nxn-kofaktor title="Definisi (Determinan matriks ukuran $n \times n$ dengan metode minor kofaktor)"}
+
+Misalkan $A$ adalah matriks berukuran $n \times n$ yang didefinisikan sebagai
+
+$$
+A =
+\begin{pmatrix}
+a_{11} & a_{12} & \cdots & a_{1n} \\
+a_{21} & a_{22} & \cdots & a_{2n} \\
+\vdots & \vdots & \ddots & \vdots \\
+a_{n1} & a_{n2} & \cdots & a_{nn}
+\end{pmatrix}.
+$$
+
+Untuk setiap elemen $a_{ij}$, minor $A_{ij}$ adalah determinan dari matriks
+yang diperoleh dengan menghilangkan baris ke-$i$ dan kolom ke-$j$.
+
+Dengan menggunakan metode minor kofaktor, determinan matriks $A$
+dapat dihitung sebagai berikut.
+
+---
+
+**a. Ekspansi menurut baris ke-$i$**
+
+$$
+\det(A) = |A|
+=
+(-1)^{i+1} a_{i1} |A_{i1}|
++
+(-1)^{i+2} a_{i2} |A_{i2}|
++ \cdots +
+(-1)^{i+n} a_{in} |A_{in}|,
+$$
+
+untuk setiap baris $i$.
+
+---
+
+**b. Ekspansi menurut kolom ke-$j$**
+
+$$
+\det(A) = |A|
+=
+(-1)^{1+j} a_{1j} |A_{1j}|
++
+(-1)^{2+j} a_{2j} |A_{2j}|
++ \cdots +
+(-1)^{n+j} a_{nj} |A_{nj}|,
+$$
+
+untuk setiap kolom $j$.
+
+:::
+
+Perhatikan bahwa faktor tanda $(-1)^{i+j}$ membentuk pola matriks berikut
+
+$$
+\begin{pmatrix}
+(-1)^{1+1} & (-1)^{1+2} & (-1)^{1+3} & \cdots \\
+(-1)^{2+1} & (-1)^{2+2} & (-1)^{2+3} & \cdots \\
+(-1)^{3+1} & (-1)^{3+2} & (-1)^{3+3} & \cdots \\
+\vdots & \vdots & \vdots & \ddots
+\end{pmatrix}
+=
+\begin{pmatrix}
++ & - & + & \cdots \\
+- & + & - & \cdots \\
++ & - & + & \cdots \\
+\vdots & \vdots & \vdots & \ddots
+\end{pmatrix}.
+$$
+
+---
+
+Jika dipilih baris ke-1, maka
+
+$$
+|A|
+=
++ a_{11}|A_{11}|
+- a_{12}|A_{12}|
++ a_{13}|A_{13}|
+- \cdots
+$$
+
+Jika dipilih kolom ke-2, maka
+
+$$
+|A|
+=
+- a_{12}|A_{12}|
++ a_{22}|A_{22}|
+- a_{32}|A_{32}|
++ \cdots
+$$
+
+::: {.callout-important title="Sifat-sifat Determinan"}
+
+<div class="det-grid">
+
+<div class="det-card">
+
+#### 🔁 Transpose
+
+1. $\det(A) = \det(A^T)$.
+
+</div>
+
+<div class="det-card">
+
+#### 🔄 Operasi Baris/Kolom (paling sering dipakai saat eliminasi)
+
+2. **Tukar dua baris/kolom** ($A \to B$)  
+   <span class="det-key">$\det(B) = -\det(A)$</span>
+
+3. **Kali satu baris/kolom dengan skalar $k$** ($A \to B$)  
+   <span class="det-key">$\det(B) = k\,\det(A)$</span>
+
+4. **Tambah $k$ kali baris/kolom lain ke suatu baris/kolom** ($A \to B$)  
+   <span class="det-key">$\det(B) = \det(A)$</span>
+
+</div>
+
+<div class="det-card">
+
+#### 🧯 Kondisi determinan nol
+
+5. Jika ada **baris/kolom nol**, maka <span class="det-key">$\det(A)=0$</span>.
+
+6. Jika ada dua baris/kolom **saling kelipatan** (dependen), maka <span class="det-key">$\det(A)=0$</span>.
+
+</div>
+
+<div class="det-card">
+
+#### 📐 Matriks segitiga
+
+7. Jika $A$ matriks segitiga atas/bawah, maka  
+   <span class="det-key">$\det(A)=a_{11}a_{22}\cdots a_{nn}$</span>  
+   (hasil kali elemen diagonal utama)
+
+</div>
+
+<div class="det-card">
+
+#### 🧩 Perkalian matriks dan skala
+
+8. Untuk matriks berordo sama:  
+   <span class="det-key">$\det(AB)=\det(A)\det(B)$</span>
+
+9. Untuk skalar $k$ dan $A$ berordo $n$:  
+   <span class="det-key">$\det(kA)=k^n\det(A)$</span>
+
+</div>
+
+</div>
+
+:::
+
+### Matriks Invers
+
+Pada pembahasan sebelumnya, kita telah mempelajari operasi dasar pada matriks dan determinan.
+Selanjutnya, kita akan membahas konsep yang sangat penting dalam aljabar linear, yaitu matriks invers.
+
+Secara intuitif, matriks invers dapat dipahami sebagai "kebalikan" dari suatu matriks terhadap operasi perkalian. Jika suatu matriks memiliki invers, maka matriks tersebut dapat digunakan untuk menyelesaikan sistem persamaan linear dan berbagai permasalahan komputasi lainnya.
+
+Konsep ini mirip dengan bilangan real:
+jika $a \neq 0$, maka terdapat $a^{-1}$ sehingga  
+$$
+a \cdot a^{-1} = 1.
+$$
+
+Demikian pula pada matriks, tetapi dengan syarat tertentu yang akan kita pelajari pada bagian ini.
+
+---
+::: {.theorem .definition #def-matriks-invers title="(Matriks Invers)"}
+
+**Matriks invers**
+
+Suatu matriks persegi $A$ dikatakan mempunyai **invers** jika terdapat matriks $B$ berordo sama sehingga
+
+$$
+AB = BA = I,
+$$
+
+dengan $I$ adalah matriks identitas.
+
+Matriks $B$ dinamakan **matriks invers** dari $A$ dan ditulis
+
+$$
+B = A^{-1}.
+$$
+
+:::
+
+**Matriks taksingular** adalah matriks segi yang memiliki nilai determinan taknol. Setiap matriks taksingular A memiliki matriks invers (A-1) yang tunggal. **Matriks singular** adalah matriks segi yang memiliki nilai determinan nol. Dengan demikian matriks singular tidak memiliki invers.
+
+Jika $A$ dan $B$ adalah dua matriks taksingular maka berlaku
+
+::: {.theorem .proposition #prop-sifat-invers title="Proposisi (Sifat-Sifat Matriks Invers)"}
+
+Jika $A$ dan $B$ adalah dua matriks taksingular (memiliki invers), maka berlaku sifat-sifat berikut:
+
+1. Invers dari invers adalah matriks itu sendiri:
+$$
+\left(A^{-1}\right)^{-1} = A
+$$
+
+2. Invers dari hasil kali dua matriks:
+$$
+(AB)^{-1} = B^{-1} A^{-1}
+$$
+
+3. Invers dari transpose suatu matriks:
+$$
+(A^T)^{-1} = (A^{-1})^T
+$$
+
+:::
+
+::: {.callout-note}
+💡 **Catatan Penting**
+
+Urutan pada sifat ke-2 terbalik.  
+Invers dari $AB$ bukan $A^{-1}B^{-1}$, tetapi
+
+$$
+(AB)^{-1} = B^{-1}A^{-1}.
+$$
+
+Ini sering menjadi sumber kesalahan dalam perhitungan.
+:::
+
+::: {.theorem .definition #def-invers-2x2 title="(Matriks Invers Ukuran 2×2)"}
+
+**Matriks Invers Ukuran 2×2**
+
+Jika
+
+$$
+A = 
+\begin{pmatrix}
+a & b \\
+c & d
+\end{pmatrix},
+$$
+
+dengan $\det(A)=ad-bc \neq 0$, maka invers matriks $A$ adalah
+
+$$
+A^{-1}
+=
+\frac{1}{ad-bc}
+\begin{pmatrix}
+d & -b \\
+-c & a
+\end{pmatrix}.
+$$
+
+:::
+
+::: {.callout-important}
+<span class="badge bg-primary">Rumus penting</span>
+
+Untuk matriks $2 \times 2$, invers diperoleh dengan:
+- Menukar $a$ dan $d$
+- Mengubah tanda $b$ dan $c$
+- Membagi dengan determinan $ad-bc$
+:::
+
+Perhatikan contoh berikut.
+
+::: {.theorem .example #exm-1 title="Contoh"}
+
+Misalkan $A=\begin{pmatrix}1&2\\3&4 \end{pmatrix}$ maka
+$$
+A^{-1}=\frac{1}{(1)(4)-(3)(2)}
+\begin{pmatrix}
+4 & -3\\
+-2 & 1
+\end{pmatrix}= \begin{pmatrix}
+-2 & \tfrac{3}{2}\\
+1 & -\tfrac{1}{2}
+\end{pmatrix}.
+$$
+
+:::
+
+#### Metode Matriks Adjoin
+
+::: {.theorem .definition #def-invers-nxn title="Definisi 5.5.3 (Matriks Invers Ukuran $n \times n$ dengan Metode Adjoin)"}
+
+**Matriks Invers Ukuran $n \times n$ dengan Metode Adjoin**
+
+Misalkan $A$ adalah matriks taksingular berordo $n \times n$ yang didefinisikan sebagai
+
+$$
+A =
+\begin{pmatrix}
+a_{11} & a_{12} & \cdots & a_{1n} \\
+a_{21} & a_{22} & \cdots & a_{2n} \\
+\vdots & \vdots & \ddots & \vdots \\
+a_{n1} & a_{n2} & \cdots & a_{nn}
+\end{pmatrix}.
+$$
+
+Misalkan $c_{ij}$ adalah kofaktor dari elemen $a_{ij}$, yaitu
+
+$$
+c_{ij} = (-1)^{i+j}\det(M_{ij}),
+$$
+
+dengan $M_{ij}$ adalah determinan anak matriks yang diperoleh dengan menghilangkan baris ke-$i$ dan kolom ke-$j$.
+
+Dengan metode matriks adjoin diperoleh
+
+$$
+A^{-1}
+=
+\frac{1}{\det(A)}\,\operatorname{Adj}(A)
+=
+\frac{1}{\det(A)}\,C^T,
+$$
+
+dengan $C$ adalah matriks kofaktor
+
+$$
+C =
+\begin{pmatrix}
++ c_{11} & - c_{12} & + c_{13} & \cdots \\
+- c_{21} & + c_{22} & - c_{23} & \cdots \\
++ c_{31} & - c_{32} & + c_{33} & \cdots \\
+\vdots & \vdots & \vdots & \ddots
+\end{pmatrix}.
+$$
+
+:::
+
+::: {.callout-important title="Langkah inti metode adjoin"}
+1. Hitung semua kofaktor $c_{ij}$.  
+2. Susun matriks kofaktor $C$.  
+3. Transposkan menjadi $C^T$ (adjoin).  
+4. Bagi dengan $\det(A)$.
+:::
+
+::: {.theorem .example #ex-invers-3x3-adjoin title="Contoh (Invers matriks 3×3 dengan metode adjoin)"}
+
+**Tentukan invers matriks berikut:**
+
+$$
+A=
+\begin{pmatrix}
+1 & 2 & 0\\
+3 & 2 & 3\\
+4 & 1 & 1
+\end{pmatrix}.
+$$
+
+::: {.callout-note}
+Pada contoh sebelumnya diketahui
+$$
+|A|=\det(A)=17.
+$$
+Karena $\det(A)\neq 0$, maka $A$ **taksingular** dan memiliki invers.
+:::
+
+**Langkah 1 — Matriks kofaktor $C$**
+
+::: {.callout-important collapse=true title="Klik untuk melihat perhitungan kofaktor (dibuka-tutup)"}
+Kita hitung $c_{ij}=(-1)^{i+j}\det(M_{ij})$.
+
+**Baris 1**
+- $c_{11}=+\det\begin{pmatrix}2&3\\1&1\end{pmatrix}=2\cdot1-3\cdot1=-1$
+- $c_{12}=-\det\begin{pmatrix}3&3\\4&1\end{pmatrix}=-(3\cdot1-3\cdot4)=-(3-12)=9$
+- $c_{13}=+\det\begin{pmatrix}3&2\\4&1\end{pmatrix}=3\cdot1-2\cdot4=3-8=-5$
+
+**Baris 2**
+- $c_{21}=-\det\begin{pmatrix}2&0\\1&1\end{pmatrix}=-(2\cdot1-0\cdot1)=-2$
+- $c_{22}=+\det\begin{pmatrix}1&0\\4&1\end{pmatrix}=1\cdot1-0\cdot4=1$
+- $c_{23}=-\det\begin{pmatrix}1&2\\4&1\end{pmatrix}=-(1\cdot1-2\cdot4)=-(1-8)=7$
+
+**Baris 3**
+- $c_{31}=+\det\begin{pmatrix}2&0\\2&3\end{pmatrix}=2\cdot3-0\cdot2=6$
+- $c_{32}=-\det\begin{pmatrix}1&0\\3&3\end{pmatrix}=-(1\cdot3-0\cdot3)=-3$
+- $c_{33}=+\det\begin{pmatrix}1&2\\3&2\end{pmatrix}=1\cdot2-2\cdot3=2-6=-4$
+:::
+
+Sehingga matriks kofaktor adalah
+
+$$
+C=
+\begin{pmatrix}
+-1 & 9 & -5\\
+-2 & 1 & 7\\
+6 & -3 & -4
+\end{pmatrix}.
+$$
+
+**Langkah 2 — Adjoin dan invers**
+
+Adjoin adalah transpose dari matriks kofaktor:
+
+$$
+\operatorname{Adj}(A)=C^T=
+\begin{pmatrix}
+-1 & -2 & 6\\
+9 & 1 & -3\\
+-5 & 7 & -4
+\end{pmatrix}.
+$$
+
+Maka invers:
+
+$$
+A^{-1}=\frac{1}{|A|}C^T
+=\frac{1}{17}
+\begin{pmatrix}
+-1 & -2 & 6\\
+9 & 1 & -3\\
+-5 & 7 & -4
+\end{pmatrix}.
+$$
+
+Akhirnya,
+
+$$
+A^{-1}=
+\begin{pmatrix}
+-\frac{1}{17} & -\frac{2}{17} & \frac{6}{17}\\
+\frac{9}{17} & \frac{1}{17} & -\frac{3}{17}\\
+-\frac{5}{17} & \frac{7}{17} & -\frac{4}{17}
+\end{pmatrix}.
+$$
+
+::: {.callout-tip title="Cek cepat (opsional)"}
+Kalikan $A\cdot A^{-1}$.  
+Jika benar, hasilnya adalah matriks identitas $I$.
+:::
+
+:::
+
+
+#### Metode Penghapusan
+
+Selain menggunakan metode adjoin, invers matriks juga dapat ditentukan dengan metode penghapusan melalui operasi baris dasar (OBE).
+
+Metode ini didasarkan pada prinsip bahwa jika suatu matriks $A$ dapat diubah menjadi matriks identitas $I$ melalui serangkaian operasi baris dasar, maka operasi yang sama yang diterapkan pada matriks identitas akan menghasilkan matriks invers $A^{-1}$.
+
+Secara praktis, metode ini dilakukan dengan membentuk matriks gabungan
+
+$$
+[A \mid I],
+$$
+
+kemudian melakukan operasi baris dasar hingga bagian kiri berubah menjadi $I$.  
+Pada saat itu, bagian kanan akan menjadi $A^{-1}$.
+
+Metode ini lebih sistematis dan sering digunakan dalam perhitungan numerik maupun komputasi.
+
+::: {.theorem .definition #def-invers-obe title="Definisi 5.5.4 (Matriks Invers Ukuran $n \times n$ dengan Metode Penghapusan)"}
+
+**Metode penghapusan**
+
+Misalkan $A$ adalah matriks taksingular berordo $n \times n$ yang didefinisikan sebagai
+
+$$
+A=
+\begin{pmatrix}
+a_{11} & a_{12} & \cdots & a_{1n} \\
+a_{21} & a_{22} & \cdots & a_{2n} \\
+\vdots & \vdots & \ddots & \vdots \\
+a_{n1} & a_{n2} & \cdots & a_{nn}
+\end{pmatrix}.
+$$
+
+Jika melalui serangkaian operasi baris dasar diperoleh
+
+$$
+E_p E_{p-1} \cdots E_2 E_1 A = I,
+$$
+
+maka berlaku
+
+$$
+PA = I,
+$$
+
+dengan
+
+$$
+P = E_p E_{p-1} \cdots E_2 E_1.
+$$
+
+Karena $PA = I$, maka
+
+$$
+P = A^{-1}.
+$$
+
+Dengan demikian, invers matriks $A$ dapat diperoleh dengan menerapkan
+operasi baris dasar pada matriks identitas yang digabungkan dengan $A$.
+
+:::
+
+::: {.theorem .example #ex-invers-3x3-obe-chain title="Contoh (Metode penghapusan dengan OBD berantai)"}
+
+Tentukan invers matriks berikut menggunakan metode penghapusan.
+
+$$
+A=
+\begin{pmatrix}
+1 & 2 & 0\\
+3 & 2 & 3\\
+4 & 1 & 1
+\end{pmatrix}.
+$$
+
+::: {.callout-note}
+Kita bentuk matriks diperbesar $(A \mid I)$, lalu lakukan OBD sampai sisi kiri menjadi $I$.
+:::
+
+$$
+\begin{aligned}
+(A\mid I)
+&=
+\begin{pmatrix}
+1 & 2 & 0 & 1 & 0 & 0\\
+3 & 2 & 3 & 0 & 1 & 0\\
+4 & 1 & 1 & 0 & 0 & 1
+\end{pmatrix}
+\\[6pt]
+&\overset{E_{21}(-3)}{\longrightarrow}
+\begin{pmatrix}
+1 & 2 & 0 & 1 & 0 & 0\\
+0 & -4 & 3 & -3 & 1 & 0\\
+4 & 1 & 1 & 0 & 0 & 1
+\end{pmatrix}
+\\[6pt]
+&\overset{E_{31}(-4)}{\longrightarrow}
+\begin{pmatrix}
+1 & 2 & 0 & 1 & 0 & 0\\
+0 & -4 & 3 & -3 & 1 & 0\\
+0 & -7 & 1 & -4 & 0 & 1
+\end{pmatrix}
+\\[6pt]
+&\overset{E_{32}\!\left(-\tfrac{7}{4}\right)}{\longrightarrow}
+\begin{pmatrix}
+1 & 2 & 0 & 1 & 0 & 0\\
+0 & -4 & 3 & -3 & 1 & 0\\
+0 & 0 & -\tfrac{17}{4} & \tfrac{5}{4} & -\tfrac{7}{4} & 1
+\end{pmatrix}
+\\[6pt]
+&\overset{E_{23}\!\left(\tfrac{12}{17}\right)}{\longrightarrow}
+\begin{pmatrix}
+1 & 2 & 0 & 1 & 0 & 0\\
+0 & -4 & 0 & -\tfrac{36}{17} & -\tfrac{4}{17} & \tfrac{12}{17}\\
+0 & 0 & -\tfrac{17}{4} & \tfrac{5}{4} & -\tfrac{7}{4} & 1
+\end{pmatrix}
+\\[6pt]
+&\overset{E_{33}\!\left(-\tfrac{4}{17}\right)}{\longrightarrow}
+\begin{pmatrix}
+1 & 2 & 0 & 1 & 0 & 0\\
+0 & -4 & 0 & -\tfrac{36}{17} & -\tfrac{4}{17} & \tfrac{12}{17}\\
+0 & 0 & 1 & -\tfrac{5}{17} & \tfrac{7}{17} & -\tfrac{4}{17}
+\end{pmatrix}
+\\[6pt]
+&\overset{E_{22}\!\left(-\tfrac{1}{4}\right)}{\longrightarrow}
+\begin{pmatrix}
+1 & 2 & 0 & 1 & 0 & 0\\
+0 & 1 & 0 & \tfrac{9}{17} & \tfrac{1}{17} & -\tfrac{3}{17}\\
+0 & 0 & 1 & -\tfrac{5}{17} & \tfrac{7}{17} & -\tfrac{4}{17}
+\end{pmatrix}
+\\[6pt]
+&\overset{E_{12}(-2)}{\longrightarrow}
+\begin{pmatrix}
+1 & 0 & 0 & -\tfrac{1}{17} & -\tfrac{2}{17} & \tfrac{6}{17}\\
+0 & 1 & 0 & \tfrac{9}{17} & \tfrac{1}{17} & -\tfrac{3}{17}\\
+0 & 0 & 1 & -\tfrac{5}{17} & \tfrac{7}{17} & -\tfrac{4}{17}
+\end{pmatrix}
+=
+(I\mid A^{-1}).
+\end{aligned}
+$$
+
+Sehingga
+
+$$
+A^{-1}=
+\begin{pmatrix}
+-\tfrac{1}{17} & -\tfrac{2}{17} & \tfrac{6}{17}\\
+\tfrac{9}{17} & \tfrac{1}{17} & -\tfrac{3}{17}\\
+-\tfrac{5}{17} & \tfrac{7}{17} & -\tfrac{4}{17}
+\end{pmatrix}.
+$$
+
+:::
 
 
 
 ## Rangkuman
+
+Matriks merupakan kumpulan bilangan yang terdiri dari baris dan kolom. Operasi pada matriks yaitu penjumlahan, pengurangan, perkalian dengan skalar dan perkalian titik. Operasi baris dasar terdiri dari tiga operasi yaitu Eij, Eij(k), dan Ei(k). Determinan merupakan nilai skalar dari suatu matriks. Nilai determinan dapat ditentukan dengan cara sarrus dan dengan metode minor kofaktor. Matriks invers dapat ditentukan dengan metode matriks adjoint. Matriks invers dapat dicari jika matriks tersebut merupakan matriks taksingular sedangkan matriks yang tidak punya invers disebut matriks singular (nilai determinannya nol).
+
+
+
 
 ## Latihan
 1. ...

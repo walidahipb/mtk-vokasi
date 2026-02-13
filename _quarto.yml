@@ -28,6 +28,7 @@ bibliography: references.bib
 
 format:
   html:
+    live-reload: true
     number-sections: true
     number-depth: 3
     css: styles.css
